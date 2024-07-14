@@ -52,15 +52,16 @@ h1 {
         height: 30%;
         top: 70%;
         background-color: #00000000;
+        transition: all 0.3s ease-in-out;
     }
 
     .conn h2 {
         color: white;
-        font-size: 2.5vw;
+        font-size: 0vw;
         position: absolute;
         top: 64%;
         left: 1.9vw;
-        transition: opacity 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         transform-origin: left bottom;
         opacity: 0%;
     }
@@ -70,8 +71,8 @@ h1 {
         left: 1.9vw;
         top: 74%;
         color: #dcdcdc;
-        transition: opacity 0.3s ease-in-out;
-        font-size: 1.8vw;
+        transition: all 0.3s ease-in-out;
+        font-size: 0vw;
         font-weight: 500;
         opacity: 0%;
 
@@ -115,6 +116,14 @@ h1 {
             background-color: #00000000;
         }
 
+        h2{
+            font-size: 2.5vw;
+        }
+
+        h3{
+            font-size: 1.8vw;
+        }
+        
         h2,
         h3,
         h4,

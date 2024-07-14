@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import { useEffect, useState } from "react";
+import './style.css';
 
 // Make a request for a user with a given ID
 
@@ -89,10 +90,10 @@ const Count = () => {
                         <h2>{ele.title || ele.name}</h2>
                         <h3>{parseInt(ele.vote_average * 10)}% <span>({(ele.vote_count / 1000 > 1 ? `${(ele.vote_count / 1000).toFixed(2)}K` : ele.vote_count)})</span></h3>
                         <div className="genres">
-                            {genre.map(te=>{
+                            {genre.map(te => {
                                 return <div className="genre">{te}</div>
                             })}
-                            <a target='_blank' href="https://www.themoviedb.org/"><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" alt="" /></a>
+                            <a target='_blank' href={`https://www.themoviedb.org/${ele.media_type}/${ele.id}`}><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" alt="" /></a>
                         </div>
                     </div>
                 )
