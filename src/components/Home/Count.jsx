@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import './style.css';
 
+
 // Make a request for a user with a given ID
 
 const Count = () => {
@@ -14,6 +15,7 @@ const Count = () => {
         getTodos()
         getTodos2()
         getTodos3()
+
     }, [])
 
     function shuffle(array) {
@@ -27,7 +29,7 @@ const Count = () => {
     }
 
     function getTodos() {
-        axios.get("https://api.themoviedb.org/3/trending/all/week?api_key=80db2c88f978a7c08fd8b402180ede6e").then((res) => {
+        axios.get("https://api.themoviedb.org/3/trending/all/day?api_key=80db2c88f978a7c08fd8b402180ede6e").then((res) => {
             let x = shuffle(res.data.results)
             setData(Object.values(x).slice(0, 6))
             // console.log(x)
@@ -42,10 +44,11 @@ const Count = () => {
     function getTodos3() {
         axios.get("https://api.themoviedb.org/3/genre/tv/list?api_key=80db2c88f978a7c08fd8b402180ede6e").then((resss) => {
             setDataaa(resss.data.genres)
-            console.log(dataaa)
+            // console.log(dataaa)
+
         })
     }
-    console.log(dataaa)
+    // console.log(dataaa)
     function mergeGenres(obj1, obj2) {
         const mergedGenres = {};
 
@@ -65,7 +68,7 @@ const Count = () => {
         return Object.values(mergedGenres);
     }
     let finalObject = mergeGenres(dataa, dataaa);
-    console.log(finalObject)
+    // console.log(finalObject)
 
     return (
 
@@ -81,10 +84,10 @@ const Count = () => {
                     return genreObj ? genreObj.name : '';
                 });
 
-                console.log(genre)
+                // console.log(genre)
 
                 return (
-                    <div className="conn" key={ele.id} style={backgroundStyle}>
+                    <div className="conn clicked" id={ele.id} style={backgroundStyle}>
                         <div className="backblack"></div>
                         <div className="backblack1"></div>
                         <h2>{ele.title || ele.name}</h2>
