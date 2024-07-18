@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mina:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+
+* {
+    font-family: "Cairo", "sans-serif";
+    cursor: default;
+}
+
+body {
+    background-image: url("./back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed ;
+    backdrop-filter: blur(0px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "ADLaM Display", sans-serif;
+    margin: 3rem auto 1rem;
+    width: fit-content;
+    color: white;
+}
+
+.spacee{
+    height: 3rem;
+}
+
+#Nv{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.5);
+    img{
+        margin-top: 1rem;
+        margin-left: 2rem;
+        cursor: pointer !important;
+    }
+    .nav-item *{
+        color: white;
+        font-family: "ADLaM Display", sans-serif !important;
+        cursor: pointer;
+    }
+    .navbar-nav{
+        margin-top: 1rem !important;
+    }
+}

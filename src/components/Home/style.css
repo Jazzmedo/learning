@@ -1,39 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mina:wght@400;700&display=swap');
 
-* {
-    font-family: "Mina", "sans-serif";
-}
-
-body {
-    background-color: #000;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    text-align: center;
-    margin: 0.8rem auto;
-}
 
 .boxedd {
     height: fit-content;
     display: flex;
-    border-right: 0.5rem solid #ffffff;
+    border-right: 0.3rem solid #ffffff;
     max-width: 90%;
     margin: 0 auto;
 
 
     .conn {
         width: 100%;
-        height: 70vh;
+        height: 60vh;
         flex: 0.5;
         background-size: cover;
         background-position: center;
         transition: flex 0.3s ease-in-out;
         position: relative;
-        border-bottom: 0.5rem solid #ffffff;
-        border-top: 0.5rem solid #ffffff;
-        border-left: 0.5rem solid #ffffff;
+        border-bottom: 0.3rem solid #ffffff;
+        border-top: 0.3rem solid #ffffff;
+        border-left: 0.3rem solid #ffffff;
         overflow: hidden;
     }
 
@@ -55,21 +40,19 @@ h1 {
         transition: all 0.3s ease-in-out;
     }
 
-    .conn h2 {
-        color: white;
+    .conn .logo {
         font-size: 0vw;
         position: absolute;
-        top: 64%;
-        left: 1.9vw;
         transition: all 0.3s ease-in-out;
-        transform-origin: left bottom;
-        opacity: 0%;
+        width: 40%;
+        display: none;
     }
+
 
     .conn h3 {
         position: absolute;
-        left: 1.9vw;
-        top: 74%;
+        left: 2vw;
+        top: 77%;
         color: #dcdcdc;
         transition: all 0.3s ease-in-out;
         font-size: 0vw;
@@ -77,8 +60,11 @@ h1 {
         opacity: 0%;
 
         span {
-            font-size: 1.2vw;
+            color: #dcdcdc98;
+            font-size: 1.3vw;
             vertical-align: middle;
+            padding-bottom: 8px;
+            display: inline-block;
         }
     }
 
@@ -116,14 +102,21 @@ h1 {
             background-color: #00000000;
         }
 
-        h2{
-            font-size: 2vw;
+
+        .logo {
+            position: absolute;
+            bottom: 0;
+            display: unset;
+            transition: display 0.3s ease-in-out;
+            right: 0;
+            z-index: 1000;
+            padding: 30px 30px;
         }
 
-        h3{
-            font-size: 1.2vw;
+        h3 {
+            font-size: 1.8vw;
         }
-        
+
         h2,
         h3,
         h4,
@@ -165,7 +158,7 @@ h1 {
     width: 90%;
 }
 
-.genres a{
+.genres a {
     text-decoration: none;
     height: fit-content;
     display: flex;
@@ -173,8 +166,8 @@ h1 {
     justify-content: center;
 }
 
-.genre{
-    height: 17px;
+.genre {
+    height: fit-content;
     width: fit-content;
     background-color: #ffffff50;
     backdrop-filter: blur(10px);
@@ -187,10 +180,11 @@ h1 {
 }
 
 .genres img {
-    height: 20px;
+    height: 30px;
     text-align: center;
-    width: 35px;
+    width: 55px;
     background-color: #ffffff50;
     padding: 7px;
     border-radius: 10px;
+    cursor: pointer;
 }
