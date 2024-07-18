@@ -9,7 +9,7 @@ function Home() {
     document.body.style.cssText=`background-image:url('${require("../../back.jpg")}')`
     return (
         <>
-        <Trending period="day"/>
+        <Trending period="week"/>
         {/* <Trending period="week"/> */}
         </>
     )
