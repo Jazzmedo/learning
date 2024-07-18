@@ -7,7 +7,11 @@
 .alll {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
     justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
+    margin: 40px 0 -20px;
 }
 
 .details {
@@ -17,8 +21,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
     border: 0px solid rgba(0, 0, 0, 0);
     width: fit-content;
     border-top-right-radius: -36px;
@@ -122,8 +124,6 @@
     padding-left: 20px;
     padding: 20px 120px 40px 30px;
     margin: 35px 0px 35px 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
     width: 30%;
 
     .flexmode {
@@ -183,17 +183,23 @@
         cursor: pointer;
     }
 
-    .flexonlyy {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-    }
 }
 
+.flexonlyy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.flexonlyys {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+}
 .allcast {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
     width: 100%;
 
     .casth {

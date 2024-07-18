@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Seasons from './Seasons'
 
 function Cast(ele) {
     let [cast, setCast] = useState([])
@@ -53,6 +54,7 @@ function Cast(ele) {
                     </div>
                 </>
                     : <></>}
+                    {ele.type == "tv" ? <Seasons ele={ele} ></Seasons>:<></>}
             </div>
 
         </>

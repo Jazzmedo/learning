@@ -37,10 +37,13 @@ function Movie() {
     return (
         <>
             <div className="alll">
-            <Details data={details} id={id} type={type} logo={logo} />
-            <Poster data={details} id={id} type={type} />
+                <div className="flexonlyys">
+
+                    <Details data={details} id={id} type={type} logo={logo} />
+                    <Poster data={details} id={id} type={type} />
+                </div>
+                <Cast data={details} id={id} type={type} />
             </div>
-            <Cast data={details} id={id} type={type} /> 
         </>
     )
 }
