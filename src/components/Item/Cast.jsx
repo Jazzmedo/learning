@@ -24,37 +24,40 @@ function Cast(ele) {
             }
         })
     }
-    console.log((sound))
+    // console.log((ele))
     return (
         <>
             <div className="allcast">
-                <h1 className='casth'>Cast</h1>
-                <div className="allcasting">
-                    {Array.isArray(cast.cast) ? cast.cast.slice(0, 10).map((ele) => {
+                <div className='widtho'>
 
-                        return <div className='castcont'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
-                            <h4 className='castname'>{ele.name}</h4>
-                            <h4 className='castchar'>{ele.character}</h4>
-                        </div>
-                    }) : <></>}
-                </div>
-                {ele.type == "movie" ? <>
-                    <div className="crew">
-                        <div className='castcont crew must obey'>
-                            <h1 className='casth'>Director</h1>
-                            <img src={dir.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${dir.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
-                            <h4 className='castname'>{dir.name}</h4>
-                        </div>
-                        {sound.length === 0 ? <></> : <div className='castcont crew must obey'>
-                            <h1 className='casth'>Music Composer</h1>
-                            <img src={sound.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${sound.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
-                            <h4 className='castname'>{sound.name}</h4>
-                        </div>}
+                    <h1 className='casth'>Cast</h1>
+                    <div className="allcasting">
+                        {Array.isArray(cast.cast) ? cast.cast.slice(0, 10).map((ele) => {
 
+                            return <div className='castcont'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
+                                <h4 className='castname'>{ele.name}</h4>
+                                <h4 className='castchar'>{ele.character}</h4>
+                            </div>
+                        }) : <></>}
                     </div>
-                </>
-                    : <></>}
-                    {ele.type == "tv" ? <Seasons ele={ele} ></Seasons>:<></>}
+                    {ele.type == "movie" ? <>
+                        <div className="crew">
+                            <div className='castcont crew must obey'>
+                                <h1 className='casth'>Director</h1>
+                                <img src={dir.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${dir.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
+                                <h4 className='castname'>{dir.name}</h4>
+                            </div>
+                            {sound.length === 0 ? <></> : <div className='castcont crew must obey'>
+                                <h1 className='casth'>Music Composer</h1>
+                                <img src={sound.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${sound.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
+                                <h4 className='castname'>{sound.name}</h4>
+                            </div>}
+
+                        </div>
+                    </>
+                        : <></>}
+                </div>
+                {ele.type == "tv" ? <Seasons ele={ele} sea={ele.data.last_episode_to_air}></Seasons> : <></>}
             </div>
 
         </>
