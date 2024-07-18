@@ -15,7 +15,7 @@ function Networks(ele) {
         })
     }
 
-    console.log(data.networks)
+    // console.log(data.networks)
     return (
         <div className='flexonlyy' style={{"gap":"1rem"}}>
             {Array.isArray(data.networks)? data.networks.map(net=><div className="flexonlyy"><img className='netw' src={`https://image.tmdb.org/t/p/original/${net.logo_path}`}/></div>):<></>}

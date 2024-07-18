@@ -10,7 +10,7 @@ function Seasons(ele) {
         setLast(ele.sea)
     })
 
-    console.log(ele.sea)
+    // console.log(ele.sea)
 
     return (
         <di>

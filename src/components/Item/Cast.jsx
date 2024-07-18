@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Seasons from './Seasons'
+import Similar from './Similar'
 
 function Cast(ele) {
     let [cast, setCast] = useState([])
@@ -58,6 +59,7 @@ function Cast(ele) {
                         : <></>}
                 </div>
                 {ele.type == "tv" ? <Seasons ele={ele} sea={ele.data.last_episode_to_air}></Seasons> : <></>}
+                <Similar id={ele.id} type={ele.type}></Similar>
             </div>
 
         </>
