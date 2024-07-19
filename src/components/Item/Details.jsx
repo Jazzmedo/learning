@@ -11,7 +11,7 @@ function Details(ele) {
 
     useEffect(() => {
         getRate()
-    }, [])
+    }, [ele.type,ele.id])
 
     function getRate() {
         axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/${ele.type == "movie" ? "release_dates" : "content_ratings"}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((ress) => {

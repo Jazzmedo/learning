@@ -17,7 +17,7 @@ function Movie() {
         getDet()
         getLogo()
         // console.log(details.genres)
-    }, [])
+    }, [type,id])
 
     function getLogo() {
         axios.get(`https://api.themoviedb.org/3/${type}/${id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {

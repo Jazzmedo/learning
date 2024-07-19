@@ -10,7 +10,7 @@ function Cast(ele) {
 
     useEffect(() => {
         getcast()
-    }, [])
+    }, [ele.type,ele.id])
 
     function getcast() {
         axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/credits?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {

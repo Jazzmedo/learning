@@ -6,7 +6,7 @@ function Similar(ele) {
     let [similar, setSimilar] = useState([])
     useEffect(() => {
         getSimilar()
-    }, [])
+    }, [ele.type,ele.id])
 
     function getSimilar() {
         axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/recommendations?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
