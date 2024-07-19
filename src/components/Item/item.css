@@ -13,17 +13,24 @@
     box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
     margin: 40px 0 -20px;
 }
+.backonly{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 35px 0px 35px 120px;
+}
 
 .details {
     padding: 20px;
-    padding-left: 120px;
-    margin: 35px 0px 35px 0;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 0px solid rgba(0, 0, 0, 0);
     width: fit-content;
-    border-top-right-radius: -36px;
+
 
     img {
         width: 450px;
@@ -119,19 +126,21 @@
 }
 
 .allpos {
-    padding-top: 20px;
-    padding-right: 120px;
-    padding-left: 20px;
-    padding: 20px 120px 40px 30px;
-    margin: 35px 0px 35px 0;
-    width: 30%;
+    margin: 20px 120px 40px 30px;
+    width: fit-content;
+    padding: 20px;
+    background: linear-gradient(215deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
     .flexmode {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 0.7rem;
-
     }
 
     .watchnow {
@@ -144,7 +153,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
+        font-size: 25px;
     }
 
     .posdet .posttle {
@@ -201,6 +210,12 @@
 }
 
 .allcast {
+    background: rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border-radius: 20px; */
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -209,6 +224,7 @@
     justify-content: space-around;
     gap: 2rem;
     padding-bottom: 4rem;
+    padding-top: 2rem;
     margin-top: 4rem;
 
     .casth {
@@ -326,6 +342,10 @@
         text-wrap: balance;
         max-width: 100px;
         color: #ffffffd5;
+    }
+
+    .seas a{
+        text-decoration: none;
     }
 }
 

@@ -28,16 +28,19 @@ function Details(ele) {
         });
     }
     return (
-        <div className='details'>
-            <img src={`https://image.tmdb.org/t/p/w500/${logo}`} alt="" />
-            <div className='extra'>
-                <span className='year'>{ele.type == "movie" ? ele.data.release_date : ele.data.first_air_date}</span>
-                <span className='capitalize'>{ele.data.original_language}</span>
-                <span>{ele.type == "movie" ? parseInt(ele.data.runtime / 60) + "h " + ele.data.runtime % 60 + "m" : ele.data.number_of_episodes + " Episodes"}</span>
-                <span className='rate'>{rate}</span>
+        <div className="backonly">
+            <div className='details'>
+
+                <img src={`https://image.tmdb.org/t/p/w500/${logo}`} alt="" />
+                <div className='extra'>
+                    <span className='year'>{ele.type == "movie" ? ele.data.release_date : ele.data.first_air_date}</span>
+                    <span className='capitalize'>{ele.data.original_language}</span>
+                    <span>{ele.type == "movie" ? parseInt(ele.data.runtime / 60) + "h " + ele.data.runtime % 60 + "m" : ele.data.number_of_episodes + " Episodes"}</span>
+                    <span className='rate'>{rate}</span>
+                </div>
+                <div className="overview">{ele.data.overview}</div>
+                <Genres type={ele.type} id={ele.id} />
             </div>
-            <div className="overview">{ele.data.overview}</div>
-        <Genres type={ele.type} id={ele.id}/>
         </div>
     )
 }

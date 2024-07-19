@@ -9,7 +9,7 @@ function Similar(ele) {
     }, [])
 
     function getSimilar() {
-        axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/similar?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
+        axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/recommendations?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
             let x = shuffle(res.data.results)
             setSimilar(Object.values(x).slice(0, 10))
 
@@ -29,7 +29,7 @@ function Similar(ele) {
     console.log(similar)
     return (
         <div className='similar'>
-            <h1 className='casth moreones'>More Like This</h1>
+            <h1 className='casth moreones'>Recommended</h1>
             <div className="seasons">
                 {
                     Array.isArray(similar) ?
@@ -37,8 +37,8 @@ function Similar(ele) {
                             // console.log(seas)
                             return (
                                 seas.poster_path !== null ?
-                                    <div key={seas.id} className='castcont crew must obey'>
-                                        <Link to={`/${ele.type}/${seas.id}`}>
+                                    <div key={seas.id} className='castcont crew must obey seas'>
+                                        <Link to={`/${ele.type}/${seas.id}/`}>
                                             <img src={`https://image.tmdb.org/t/p/w500/${seas.poster_path}`} />
                                             <h4 className='castname'>{seas.name||seas.title}</h4>
                                         </Link>
