@@ -6,7 +6,7 @@ function Similar(ele) {
     let [similar, setSimilar] = useState([])
     useEffect(() => {
         getSimilar()
-    }, [ele.type,ele.id])
+    }, [ele.type, ele.id])
 
     function getSimilar() {
         axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/recommendations?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
@@ -40,7 +40,7 @@ function Similar(ele) {
                                     <div key={seas.id} className='castcont crew must obey seas'>
                                         <Link to={`/${ele.type}/${seas.id}/`}>
                                             <img src={`https://image.tmdb.org/t/p/w500/${seas.poster_path}`} />
-                                            <h4 className='castname'>{seas.name||seas.title}</h4>
+                                            <h4 className='castname'>{seas.name || seas.title}</h4>
                                         </Link>
                                     </div>
                                     : <></>

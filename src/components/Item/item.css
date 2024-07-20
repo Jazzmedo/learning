@@ -344,8 +344,13 @@
         text-wrap: balance;
         max-width: 100px;
         color: #ffffffd5;
-    }
 
+
+    }
+    .castname:hover{
+        cursor: pointer;
+    }
+    
     .seas a{
         text-decoration: none;
     }
