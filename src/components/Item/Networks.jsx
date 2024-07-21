@@ -9,7 +9,7 @@ function Networks(ele) {
 
     function getGenres() {
         axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             setData(res.data)
 
         })
@@ -18,7 +18,7 @@ function Networks(ele) {
     // console.log(data.networks)
     return (
         <div className='flexonlyy' style={{"gap":"1rem"}}>
-            {Array.isArray(data.networks)? data.networks.map(net=><div className="flexonlyy"><img className='netw' src={`https://image.tmdb.org/t/p/original/${net.logo_path}`}/></div>):<></>}
+            {Array.isArray(data.networks)? data.networks.map(net=><div key={net.id} className="flexonlyy"><img className='netw' src={`https://image.tmdb.org/t/p/original/${net.logo_path}`}/></div>):<></>}
         </div>
     )
 }

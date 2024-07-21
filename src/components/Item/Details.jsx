@@ -5,7 +5,6 @@ import Genres from './Genres'
 
 function Details(ele) {
     let [rate, setRate] = useState([])
-    let ittem = ele.data.genres
     let [logo, setLogo] = useState([])
 
 
@@ -25,8 +24,12 @@ function Details(ele) {
             if (firstLogo) {
                 setLogo(firstLogo.file_path);
             }
+            else{
+                setLogo(res.data.logos[0].file_path)
+            }
         });
     }
+    console.log(logo)
     return (
         <div className="backonly">
             <div className='details'>

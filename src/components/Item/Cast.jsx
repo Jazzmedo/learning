@@ -3,6 +3,7 @@ import axios from 'axios'
 import Seasons from './Seasons'
 import Similar from './Similar'
 
+
 function Cast(ele) {
     let [cast, setCast] = useState([])
     let [dir, setDir] = useState([])
@@ -35,7 +36,7 @@ function Cast(ele) {
                     <div className="allcasting">
                         {Array.isArray(cast.cast) ? cast.cast.slice(0, 10).map((ele) => {
 
-                            return <div className='castcont'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
+                            return <div key={ele.id} className='castcont'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
                                 <h4 className='castname'>{ele.name}</h4>
                                 <h4 className='castchar'>{ele.character}</h4>
                             </div>

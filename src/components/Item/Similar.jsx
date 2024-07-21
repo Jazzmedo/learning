@@ -26,7 +26,7 @@ function Similar(ele) {
         return array;
     }
 
-    console.log(similar)
+    // console.log(similar)
     return (
         <div className='similar'>
             <h1 className='casth moreones'>Recommended</h1>

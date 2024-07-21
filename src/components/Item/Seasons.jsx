@@ -13,25 +13,24 @@ function Seasons(ele) {
     // console.log(ele.sea)
 
     return (
-        <di>
+        <div>
             <h1 className='casth moreones'>Seasons</h1>
             <div className="seasons">
                 {
                     Array.isArray(seasons.seasons) ?
                         seasons.seasons.map((seas) => {
-                            // console.log(seas)
-                            return (seas.name != "Specials" && seas.season_number<=last.season_number?
+                            return (seas.name !== "Specials" && seas.season_number <= last.season_number ?
                                 <div key={seas.id} className='castcont crew must obey'>
-                                    <img src={`https://image.tmdb.org/t/p/w500/${seas.poster_path}`} />
+                                    <img src={`https://image.tmdb.org/t/p/w500/${seas.poster_path}`} alt={`Season ${seas.season_number} Poster`} />
                                     <h4 className='castname'>{seas.season_number}) {seas.name}</h4>
                                 </div>
-                                : <></>)
+                                : null)
                         })
-                        : <></>
+                        : null
                 }
             </div>
 
-        </di>
+        </div>
     )
 }
 

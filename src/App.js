@@ -9,20 +9,20 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <nav id="Nv" class="navbar navbar-expand-lg navbar-light bg-light">
-          <Link class="navbar-brand" to="/Home"><img src={require("./logo/wlogo.png")} height="24" /></Link>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/Home">Home</Link>
+        <nav id="Nv" className="navbar navbar-expand-lg navbar-light bg-light">
+          <Link className="navbar-brand" to="/Home"><img src={require("./logo/wlogo.png")} height="24" /></Link>
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/Home">Home</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link disabled" to="/Explore">Explore</Link>
+            <li className="nav-item">
+              <Link className="nav-link disabled" to="/Explore">Explore</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link disabled" to="/Movies">Movies</Link>
+            <li className="nav-item">
+              <Link className="nav-link disabled" to="/Movies">Movies</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link disabled" href="/TV">TV Shows</Link>
+            <li className="nav-item">
+              <Link className="nav-link disabled" href="/TV">TV Shows</Link>
             </li>
           </ul>
         </nav>
