@@ -21,6 +21,12 @@
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     margin: 35px 0px 35px 120px;
+    transition: all 0.3s ease-in-out;
+}
+
+.backonly:hover{
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.259);
+    transform: scale(1.05);
 }
 
 .details {
@@ -63,6 +69,12 @@
             width: fit-content;
             margin: 0 20px;
             padding: 0 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .rate:hover{
+            color: #000;
+            background-color: #fff;
+            border: 1px solid #000;
         }
     }
 
@@ -79,10 +91,14 @@
         height: 30px;
         text-align: center;
         width: 55px;
-        background-color: #ffffff74;
+        background-color: #ffffff;
         padding: 7px;
         border-radius: 10px;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    .genress img:hover {
+            background-color: #000;
     }
 
     .genress {
@@ -112,7 +128,7 @@
     .genree {
         height: fit-content;
         width: fit-content;
-        background-color: #ffffffaa;
+        background-color: #ffffff;
         backdrop-filter: blur(10px);
         color: rgb(0, 0, 0);
         padding: 8px;
@@ -121,8 +137,20 @@
         font-size: 14px;
         text-align: center;
         font-weight: 500;
+        transition: all 0.3s ease-in-out;
     }
 
+    .genree:hover{
+        color: #fff;
+        background-color: #000;
+        /* border: 1px solid #fff; */
+    }
+
+}
+
+.allpos:hover{
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.259);
+    transform: scale(1.05);
 }
 
 .allpos {
@@ -136,6 +164,7 @@
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease-in-out;
 
     .flexmode {
         display: flex;
@@ -177,9 +206,10 @@
     }
 
     .posterr {
-        width: 80px;
-        height: 120px;
+        width: 180px;
+        height: auto;
         border-radius: 10px;
+        margin-right: 1rem;
     }
 
     .netw {
@@ -243,8 +273,23 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
+        a{
+            text-decoration: none;
+        }
 
 
+    }
+
+    .castcont:hover {
+
+        img,
+        .castname {
+            filter: brightness(1);
+        }
+        img:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.266);
+        }
     }
 
     .castcont {
@@ -258,13 +303,15 @@
 
         img {
             width: 100px;
-            border-radius: 30px;
+            border-radius: 20px;
             height: auto;
             background-position: center;
             background-size: cover;
             background-color: rgb(255 255 255 / 10%);
-            filter: brightness(0.6);
+            filter: brightness(0.6) blur(0.5px);
             transition: filter 0.3s ease-in-out;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease-in-out;
         }
         
         h4 {
@@ -285,6 +332,8 @@
             max-width: 100px;
             color: #ffffffd5;
             filter: brightness(0.6);
+            text-align: center;
+            align-self: center;
         }
 
         .castchar {
@@ -295,11 +344,17 @@
             font-weight: 600;
             overflow: hidden;
             text-align: start;
-            text-wrap: balance;
+            text-wrap: wrap;
             color: #ffffff77;
             text-overflow: ellipsis;
             word-break: break-word;
             margin: 0;
+            max-height: 18px;
+            transition: all 0.3s ease-in-out;
+        }
+        .castchar:hover{
+            color: #fff;
+            max-height: 100px;
         }
     }
 
@@ -326,10 +381,10 @@
     display: flex;
     align-items: flex-start;
     justify-content:center;
+    /* flex-direction: column; */
     flex-wrap: wrap;
     padding: 0 2rem;
     gap: 2.5rem;
-    width: 100%;
 
     img {
         width: 100px;
@@ -369,4 +424,17 @@
 
 .widtho{
     width: fit-content;
+}
+
+.oneseason{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+#seas{
+    gap: 0;
+    flex-direction: column;
 }

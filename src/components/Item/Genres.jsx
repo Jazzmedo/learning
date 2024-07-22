@@ -5,7 +5,7 @@ function Genres(ele) {
     let [genre, setGenre] = useState([])
     useEffect(() => {
         getGenres()
-    }, [ele.type,ele.id])
+    }, [ele.type,ele.id,ele.imdb])
 
     function getGenres() {
         axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
@@ -13,6 +13,7 @@ function Genres(ele) {
             setGenre(res.data.genres)
         })
     }
+    // console.log(ele.imdb)
     return (
         <>
             <div className="genress">
@@ -20,6 +21,7 @@ function Genres(ele) {
                     return <div key={te.id} className="genree">{te.name}</div>
                 })}
                 <a target='_blank' href={`https://www.themoviedb.org/${ele.type}/${ele.id}`}><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" alt="" /></a>
+                <a target='_blank' href={`https://www.imdb.com/title/${ele.imdb}`}><img src="https://imgur.com/b1d2LOV.png" alt="" /></a>
             </div>
         </>
     )

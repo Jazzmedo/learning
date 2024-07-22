@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import Home from './components/Home/Home'
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import People from './components/people/People';
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "",
                 element: <Home />
+            },
+            {
+                path: "/person/:pid",
+                element: <People />
             }
         ],
     },

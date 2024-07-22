@@ -10,7 +10,7 @@ function Details(ele) {
 
     useEffect(() => {
         getRate()
-    }, [ele.type,ele.id])
+    }, [ele.type,ele.id,ele.imdb])
 
     function getRate() {
         axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/${ele.type == "movie" ? "release_dates" : "content_ratings"}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((ress) => {
@@ -29,7 +29,7 @@ function Details(ele) {
             }
         });
     }
-    console.log(logo)
+    // console.log(imdb)
     return (
         <div className="backonly">
             <div className='details'>
@@ -42,7 +42,7 @@ function Details(ele) {
                     <span className='rate'>{rate}</span>
                 </div>
                 <div className="overview">{ele.data.overview}</div>
-                <Genres type={ele.type} id={ele.id} />
+                <Genres imdb={ele.imdb} type={ele.type} id={ele.id} />
             </div>
         </div>
     )

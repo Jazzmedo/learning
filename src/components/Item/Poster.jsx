@@ -20,7 +20,7 @@ function Poster(ele) {
             <div className="allpos">
                 <div className="flexmode">
 
-                    <img className='posterr' src={`https://image.tmdb.org/t/p/w342/${data.poster_path}`} alt="" />
+                    <img className='posterr' src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} alt="" />
                     <div className="posdet">
                         <h3 className='posttle'>{data.title||data.name}</h3>
                         <h3 className='vote'>{parseInt(data.vote_average * 10)}% <span>({(data.vote_count / 1000 > 1 ? `${(data.vote_count / 1000).toFixed(2)}K` : data.vote_count)})</span></h3>
