@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import {DetailsContext} from '../context/DetailsContextProvider'
 
-function Similar(ele) {
-    let [similar, setSimilar] = useState([])
+function Similar() {
+    let {type,id,similar,setSimilar}=useContext(DetailsContext)
+    
     useEffect(() => {
         getSimilar()
-    }, [ele.type, ele.id])
+    }, [type, id])
 
     function getSimilar() {
-        axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/recommendations?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
+        axios.get(`https://api.themoviedb.org/3/${type}/${id}/recommendations?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
             let x = shuffle(res.data.results)
             setSimilar(Object.values(x).slice(0, 10))
 
@@ -38,7 +40,7 @@ function Similar(ele) {
                             return (
                                 seas.poster_path !== null ?
                                     <div key={seas.id} className='castcont crew must obey seas'>
-                                        <Link to={`/${ele.type}/${seas.id}/`}>
+                                        <Link to={`/${type}/${seas.id}/`}>
                                             <img src={`https://image.tmdb.org/t/p/w500/${seas.poster_path}`} />
                                             <h4 className='castname'>{seas.name || seas.title}</h4>
                                         </Link>

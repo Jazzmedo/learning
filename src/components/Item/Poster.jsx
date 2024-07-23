@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import axios from 'axios'
+import {DetailsContext} from '../context/DetailsContextProvider'
 import Networks from './Networks'
 
-function Poster(ele) {
+function Poster() {
+    let {id,type} = useContext(DetailsContext)
+
     let [data, setData] = useState([])
     useEffect(() => {
         getGenres()
-    }, [ele.type,ele.id])
+    }, [type,id])
 
     function getGenres() {
-        axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
+        axios.get(`https://api.themoviedb.org/3/${type}/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
             // console.log(res.data)
             setData(res.data)
         })
@@ -27,7 +30,7 @@ function Poster(ele) {
                     </div>
                 </div>
                 
-                {ele.type=="tv"? <><h2 className='watchnow'>Watch Now</h2> <Networks id={ele.id} type={ele.type}/></>:<></>}
+                {type=="tv"? <><h2 className='watchnow'>Watch Now</h2> <Networks/></>:<></>}
             </div>
 
         </>

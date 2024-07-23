@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import Details from './Details'
 import Poster from './Poster'
 import Cast from './Cast'
+import { DetailsContext } from '../context/DetailsContextProvider'
 
 function Movie() {
 
@@ -11,12 +12,24 @@ function Movie() {
     let [imdb, setImdb] = useState([])
     let { id } = useParams()
     let { type } = useParams()
+    let [logo, setLogo] = useState([])
+    let [cast, setCast] = useState([])
+    let [dir, setDir] = useState([])
+    let [sound, setSound] = useState([])
+    let [seasons, setSeason] = useState([])
+    let [last, setLast] = useState([])
+    let [similar, setSimilar] = useState([])
 
 
     useEffect(() => {
         // getDet()
         getLogo()
         document.getElementById("Nv").scrollIntoView({ behavior: "smooth" });
+        if (type == "tv") {
+            setLast(details.last_episode_to_air)
+            setSeason(details.seasons)
+        }
+        console.log(cast)
         // console.log(details.genres)
     }, [type, id, imdb])
 
@@ -24,10 +37,10 @@ function Movie() {
         axios.get(`https://api.themoviedb.org/3/${type}/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((ress) => {
             setData(ress.data)
             setImdb(ress.data.imdb_id)
-            if(ress.data.imdb_id!==null){
+            if (ress.data.imdb_id !== null) {
                 setImdb(ress.data.imdb_id)
             }
-            
+
         })
         if (type == "tv") {
             axios.get(`https://api.themoviedb.org/3/tv/${id}/external_ids?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
@@ -36,20 +49,21 @@ function Movie() {
         }
 
     }
-// console.log(imdb)
+    // console.log(imdb)
 
     document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
     document.title = `${details.title || details.name}`;
     return (
         <>
-            <div className="alll">
-                <div className="flexonlyys">
-
-                    <Details  data={details} id={id} type={type} imdb={imdb} />
-                    <Poster data={details} id={id} type={type} />
-                </div>
+            <DetailsContext.Provider value={{ details, id, type, imdb, logo, setLogo, cast, dir, sound, setCast, setDir, setSound, seasons, setSeason, last, setLast, similar, setSimilar }}>
+                <div className="alll">
+                    <div className="flexonlyys">
+                        <Details />
+                        <Poster />
+                    </div>
                 <Cast data={details} id={id} type={type} />
             </div>
+            </DetailsContext.Provider>
         </>
     )
 }

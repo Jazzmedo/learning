@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Seasons from './Seasons'
 import Similar from './Similar'
+import {DetailsContext} from '../context/DetailsContextProvider.jsx'
 
 
-function Cast(ele) {
-    let [cast, setCast] = useState([])
-    let [dir, setDir] = useState([])
-    let [sound, setSound] = useState([])
-
+function Cast() {
+    let {id,type,cast, setCast,dir, setDir,sound, setSound}=useContext(DetailsContext)
     useEffect(() => {
         getcast()
-    }, [ele.type, ele.id])
+    }, [type, id])
 
     function getcast() {
-        axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.id}/credits?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
+        axios.get(`https://api.themoviedb.org/3/${type}/${id}/credits?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
             setCast(res.data)
             const firstdir = res.data.crew.find(element => element.job === "Director");
             if (firstdir) {
@@ -45,7 +43,7 @@ function Cast(ele) {
                             </Link>
                         }) : <></>}
                     </div>
-                    {ele.type == "movie" ? <>
+                    {type == "movie" ? <>
                         <div className="crew">
                             <div className='castcont crew must obey'>
                                 <h1 className='casth'>Director</h1>
@@ -66,8 +64,8 @@ function Cast(ele) {
                     </>
                         : <></>}
                 </div>
-                {ele.type == "tv" ? <Seasons ele={ele} sea={ele.data.last_episode_to_air}></Seasons> : <></>}
-                <Similar id={ele.id} type={ele.type}></Similar>
+                {type == "tv" ? <Seasons></Seasons> : <></>}
+                <Similar></Similar>
             </div>
 
         </>
