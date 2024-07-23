@@ -36,7 +36,7 @@ function Movie() {
         }
 
     }
-console.log(imdb)
+// console.log(imdb)
 
     document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
     document.title = `${details.title || details.name}`;

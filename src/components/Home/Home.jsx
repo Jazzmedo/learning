@@ -3,7 +3,7 @@ import Trending from "./Trending"
 
 function Home() {
     useEffect(()=>{
-        document.title = "Home";
+        document.title = "Plotwist";
     },[])
 
     document.body.style.cssText=`background-image:url('${require("../../back.jpg")}')`

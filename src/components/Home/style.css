@@ -188,3 +188,7 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.vote , .vote span{
+    font-family: 'Cairo', sans-serif;
+}

@@ -18,7 +18,7 @@ function KnownFor(people) {
                     // Filter out characters named "Self" and movies with order smaller than 3
                     const filteredCast = res.data.cast.filter(item => 
                         !item.character.includes("Self") && 
-                        !(item.media_type === 'movie' && item.order < 1)
+                        !(item.media_type === 'movie' && item.order < 0)
                     );
 
                     // Group by TV show or movie

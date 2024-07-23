@@ -185,6 +185,8 @@
         max-width: 100px;
         color: #ffffffd5;
         filter: brightness(0.6);
+        text-align: center;
+        align-self: center;
     }
 
     .movchar {
@@ -202,6 +204,8 @@
         margin: 0;
         transition: all 0.3s ease-in-out;
         max-height: 18px;
+        text-align: center;
+        align-self: center;
     }
     .movchar:hover{
         color: #fff;

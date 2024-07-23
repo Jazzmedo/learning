@@ -35,7 +35,7 @@ function TrendingData({ ele, genre }) {
                 <div className="backblack"></div>
                 <div className="backblack1"></div>
                 <img className='logo' src={`https://image.tmdb.org/t/p/w300/${logo}`} alt="" />
-                <h3>{parseInt(ele.vote_average * 10)}% <span>({(ele.vote_count / 1000 > 1 ? `${(ele.vote_count / 1000).toFixed(2)}K` : ele.vote_count)})</span></h3>
+                <h3 className='vote'>{parseInt(ele.vote_average * 10)}% <span>({(ele.vote_count / 1000 > 1 ? `${(ele.vote_count / 1000).toFixed(2)}K` : ele.vote_count)})</span></h3>
                 <div className="genres">
                     {genre.map(te => {
                         return <div key={te} className="genre">{te}</div>

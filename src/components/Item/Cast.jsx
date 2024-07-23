@@ -27,7 +27,7 @@ function Cast(ele) {
             }
         })
     }
-    console.log((ele))
+    // console.log((ele))
     return (
         <>
             <div className="allcast">
@@ -37,7 +37,7 @@ function Cast(ele) {
                     <div className="allcasting">
                         {Array.isArray(cast.cast) ? cast.cast.slice(0, 10).map((ele) => {
 
-                            return <Link to={`/person/${ele.id}`}>
+                            return <Link key={ele.id} to={`/person/${ele.id}`}>
                                 <div key={ele.id} className='castcont'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
                                     <h4 className='castname'>{ele.name}</h4>
                                     <h4 className='castchar'>{ele.character}</h4>
