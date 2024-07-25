@@ -1,20 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { SeasonContext } from '../context/SeasonContext'
 
-function SeasCast(ele) {
-    let [cast, setCast] = useState([])
+function SeasCast() {
+
+
+    let { cast, setCast, episodes, id, seasnum } = useContext(SeasonContext)
     useEffect(() => {
-        if(ele.id){
+
+        if (id && seasnum>0) { // Check if seasnum is defined before calling getCast
             getCast()
         }
-    }, )
+    }, [id, seasnum]) // Include seasnum in the dependency array
 
     function getCast() {
-        axios.get(`https://api.themoviedb.org/3/tv/${ele.id}/season/${ele.episodes.season_number}/credits?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
+        if (!seasnum) return; // Check if seasnum is defined before making the API call
+
+        axios.get(`https://api.themoviedb.org/3/tv/${id}/season/${seasnum}/credits?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
             setCast(res.data)
         })
+
     }
+
+    // console.log(cast)
 
     return (
         <>

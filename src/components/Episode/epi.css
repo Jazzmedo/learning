@@ -7,14 +7,14 @@
     scroll-behavior: smooth;
 }
 
-.peopleAll {
+.epiAll {
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
     width: 100%;
     padding-bottom: 1rem;
 }
 
-.peopledet {
+.epidet {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -22,29 +22,42 @@
     margin: 3rem 0;
 }
 
-.posterpeople {
-    width: 18%;
+.epiposter:hover{
+    transform: scale(1.05);
+    img:hover {
+        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.266);
+    }
+    .votinggg.force{
+        background-color: #006671;
+    }
+}
+
+.epiposter {
+    width: 25%;
     height: auto;
     margin-right: 1rem;
     border-radius: 20px;
     margin-left: 2rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    .votinggg.force{
+        top: -15px;
+        right: -15px;
+    }
 
     img {
-        box-shadow: -15px 15px 20px 0px rgba(255, 255, 255, 0.266);
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.266);
         border: 2px solid white;
         width: 100%;
         height: auto;
         border-radius: 20px;
-        transition: all 0.3s ease-in-out;
     }
 
-    img:hover {
-        transform: scale(1.05);
-        box-shadow: 15px 15px 20px 0px rgba(255, 255, 255, 0.266);
-    }
+
 }
 
-.pdetails {
+.epipdetails {
     max-width: 75%;
 
     h1 {
@@ -63,6 +76,7 @@
         justify-content: flex-start;
 
         span {
+            transition: all 0.3s ease-in-out;
             padding-left: 2rem;
             border-left: 1px solid white;
         }
@@ -70,6 +84,10 @@
         span:first-child {
             padding-left: 0;
             border-left: 0px solid white;
+        }
+
+        span:hover {
+            color: #ffffff;
         }
     }
 

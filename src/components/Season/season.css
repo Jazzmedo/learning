@@ -1,87 +1,99 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.seasondet{
-    display:flex;
+.seasondet {
+    display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1.5rem;
 }
 
-.allseas{
+.allseas {
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
     margin: 2rem 0 0 0;
 }
 
-.seasonpos{
+.seasonpos {
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: flex-start;
     margin: 1rem 0 1.5rem 3rem;
     max-width: 250px;
 }
 
-.posterrseas{
-    width: 250px;
+.posterrseas {
+    width: fit-content;
+    position: relative;
     height: auto;
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    img {
+        width: 250px;
+        height: auto;
+        border-radius: 30px;
+    }
 }
 
-.posterrseas:hover{
+.posterrseas:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px 0px rgba(255, 255, 255, 0.5);
+
+    .votinggg.force {
+        background-color: #006671;
+        color: #fff;
+    }
 }
 
-.seasposttle{
-    font-size: 1.6rem;
-    text-wrap: wrap;
-    color: rgba(255, 255, 255, 0.614);
+.seasposttle {
     text-align: center;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     margin-bottom: 1rem;
 }
 
-.seasposttle:hover{
+.seasposttle:hover {
     color: rgb(255, 255, 255);
 }
 
-.voteseas{
+.voteseas {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.614);
     transition: all 0.3s ease-in-out;
     /* margin-top: 5px; */
 }
 
-.voteseas:hover{
+.voteseas:hover {
     color: rgb(255, 255, 255);
 }
 
-.seasvote{
+.seasvote {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 1rem;
     color: rgba(255, 255, 255, 0.614);
 }
-.posseas{
+
+.posseas {
     width: 250px;
     margin-bottom: 10px;
 }
 
-.seasname{
+.seasname {
     color: rgba(255, 255, 255, 0.614);
     transition: all 0.3s ease-in-out;
     font-size: 1.3rem;
 }
 
-.seasname:hover{
+.seasname:hover {
     color: rgb(255, 255, 255);
 }
 
@@ -97,7 +109,7 @@
     font-size: 25px;
 }
 
-.netw{
+.netw {
     margin-top: 3px;
     height: auto;
     text-align: center;
@@ -108,25 +120,25 @@
     cursor: pointer;
 }
 
-.sep{
+.sep {
     background-color: #ffffff58;
     width: 3px;
     height: 400px;
     margin-top: 1.3rem;
 }
 
-.episodess{
-    width:calc(100% - 3px - 3rem - 250px);
+.episodess {
+    width: calc(100% - 3px - 3rem - 250px);
 }
 
-.epish2{
+.epish2 {
     color: #ffffffe8;
     font-size: 1.7rem;
     margin-top: 1rem;
 
 }
 
-.cardsss{
+.cardsss {
     display: flex;
     flex-wrap: wrap;
     gap: 3.5rem;
@@ -134,7 +146,7 @@
     position: relative;
 }
 
-.oncardd{
+.oncardd {
     width: 29%;
     max-width: 29%;
     height: 192px;
@@ -147,7 +159,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-.posterrr{
+.posterrr {
     border-radius: 25px;
     width: 100%;
     height: auto;
@@ -156,7 +168,7 @@
     left: 0;
 }
 
-.numberep{
+.numberep {
     position: absolute;
     width: auto;
     height: 2.5rem;
@@ -175,7 +187,7 @@
     padding: 0 0.9rem;
 }
 
-.voteep{
+.voteep {
     position: absolute;
     width: auto;
     height: 2.5rem;
@@ -194,7 +206,10 @@
     padding: 0 0.9rem;
 }
 
-.episdets{
+.episdets {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
     height: 35%;
@@ -208,14 +223,15 @@
     width: 100%;
     padding: 0 1rem;
     transition: all 0.3s ease-in-out;
-    h5{
+
+    h5 {
         text-wrap: wrap;
         max-width: 55%;
         transition: all 0.3s ease-in-out;
     }
 }
 
-.septer{
+.septer {
     width: 2px;
     height: 70%;
     margin: 2rem 1rem;
@@ -223,11 +239,11 @@
     transition: all 0.3s ease-in-out;
 }
 
-#epnammma{
+#epnammma {
     font-size: 1.05rem;
 }
 
-.detsdets{
+.detsdets {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,42 +252,48 @@
     transition: all 0.3s ease-in-out;
     gap: 0.25rem;
 
-    *{
+    * {
         padding: 0;
         margin: 0;
         transition: all 0.3s ease-in-out;
     }
 }
 
-.oncardd:hover{
+.oncardd:hover {
     transform: scale(1.05);
-    .septer{
+
+    .septer {
         background-color: #fff;
     }
-    .detsdets{
-        h6{
+
+    .detsdets {
+        h6 {
             color: #fff;
         }
     }
-    .voteep{
+
+    .voteep {
         background-color: #006671;
     }
-    .numberep{
+
+    .numberep {
         background-color: #000;
     }
-    .episdets{
+
+    .episdets {
         background-color: rgba(0, 0, 0, 0.7);
-        h5{
+
+        h5 {
             color: #fff;
         }
     }
 }
 
-.widthoo{
+.widthoo {
     width: 100%;
 }
 
-.casthh{
+.casthh {
     margin: 3rem auto 0;
 }
 
@@ -282,7 +304,8 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin: 0 2rem;
-    a{
+
+    a {
         text-decoration: none;
     }
 
@@ -295,7 +318,8 @@
     .castnamee {
         filter: brightness(1);
     }
-    img:hover{
+
+    img:hover {
         transform: scale(1.05);
         box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.266);
     }
@@ -322,12 +346,12 @@
         margin-bottom: 1rem;
         transition: all 0.3s ease-in-out;
     }
-    
+
     h4 {
         font-family: "ADLaM Display", sans-serif;
         font-size: 16px;
     }
-    
+
 
     .castnamee {
         font-size: 14px;
@@ -339,7 +363,7 @@
         overflow: hidden;
         text-wrap: balance;
         max-width: 100px;
-        color: #ffffffd5;
+        color: #ffffff;
         filter: brightness(0.6);
         text-align: center;
         align-self: center;
@@ -363,14 +387,17 @@
         text-align: center;
         align-self: center;
     }
-    .castcharr:hover{
+
+    .castcharr:hover {
         color: #fff;
         max-height: 100px;
     }
 }
 
-.castcontt:hover{
-    img,.castnamee{
+.castcontt:hover {
+
+    img,
+    .castnamee {
         filter: brightness(1);
     }
 }

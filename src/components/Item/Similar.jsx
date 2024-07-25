@@ -1,11 +1,11 @@
-import React, { useEffect, useState,useContext } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import {DetailsContext} from '../context/DetailsContextProvider'
+import { DetailsContext } from '../context/DetailsContextProvider'
 
 function Similar() {
-    let {type,id,similar,setSimilar}=useContext(DetailsContext)
-    
+    let { type, id, similar, setSimilar } = useContext(DetailsContext)
+
     useEffect(() => {
         getSimilar()
     }, [type, id])
@@ -40,9 +40,10 @@ function Similar() {
                             return (
                                 seas.poster_path !== null ?
                                     <div key={seas.id} className='castcont crew must obey seas'>
+                                        <div className="votinggg force another">{parseInt(seas.vote_average * 10)}%</div>
                                         <Link to={`/${type}/${seas.id}/`}>
                                             <img src={`https://image.tmdb.org/t/p/w500/${seas.poster_path}`} />
-                                            <h4 className='castname'>{seas.name || seas.title}</h4>
+                                            <h4 className='castname'>{seas.original_title || seas.original_name}</h4>
                                         </Link>
                                     </div>
                                     : <></>

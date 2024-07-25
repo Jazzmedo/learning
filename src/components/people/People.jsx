@@ -27,7 +27,7 @@ function People() {
     };
 
     document.body.style.cssText = `background-image:url('${require('../../back.jpg')}')`
-    document.title = `${people.title || people.name}`;
+    document.title = `Plotwist | ${people.title || people.name}`;
 
     // console.log(people.known_for_department)
 

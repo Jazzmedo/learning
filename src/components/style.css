@@ -1,0 +1,52 @@
+body {
+    background-color: #282c34; /* Darker shade for more depth */
+    color: #abb2bf; /* Soft white for better readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+.search-bar {
+    position: relative;
+    width: 300px;
+    margin: 40px auto; /* More margin for better isolation */
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding for better touch */
+    border: none; /* Border removed for a cleaner look */
+    border-radius: 8px; /* More rounded corners */
+    background-color: #3a3f4b; /* Slightly lighter than body for contrast */
+    color: #c8ccd4; /* Lighter text color for better visibility */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+    transition: background-color 0.3s; /* Smooth transition for interactive feel */
+}
+
+#searchInput:focus {
+    background-color: #484e5c; /* Darker on focus for visual feedback */
+}
+
+.dropdown-menu {
+    position: absolute;
+    width: 100%;
+    background-color: #3a3f4b; /* Matching the input field */
+    border: none; /* Removing border for a seamless look */
+    border-top: 2px solid #484e5c; /* Subtle top border for definition */
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* Stronger shadow for floating effect */
+    z-index: 1000;
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px; /* Uniform padding */
+    color: #c8ccd4; /* Matching the input text color */
+    text-decoration: none;
+    border-bottom: 1px solid #484e5c; /* Subtle border for separation */
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.dropdown-item:hover {
+    background-color: #4b5364; /* Highlight on hover */
+    color: #ffffff; /* Brighter color on hover for better visibility */
+}

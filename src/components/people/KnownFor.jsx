@@ -16,8 +16,8 @@ function KnownFor(people) {
             if (res && people.known) {
                 if (people.known == "Acting") {
                     // Filter out characters named "Self" and movies with order smaller than 3
-                    const filteredCast = res.data.cast.filter(item => 
-                        !item.character.includes("Self") && 
+                    const filteredCast = res.data.cast.filter(item =>
+                        !item.character.includes("Self") &&
                         !(item.media_type === 'movie' && item.order < 0)
                     );
 
@@ -61,10 +61,12 @@ function KnownFor(people) {
             <div className="allmov">
                 {credits ? credits.map((credit) => (
                     <Link key={credit.id} to={`/${credit.media_type}/${credit.id}`}>
-                        {console.log(credit)}
-                        <div key={credit.id} className='movcont'> <img src={credit.poster_path !== null ? `https://image.tmdb.org/t/p/w500/${credit.poster_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
-                            <h4 className='movname'>{credit.original_title|| credit.original_name}</h4>
-                            {people.known == "Acting"? <h4 className='movchar'>{credit.character}</h4>:<></>}
+                        {/* {console.log(credit)} */}
+                        <div key={credit.id} className='movcont'>
+                            <div className="votinggg force another">{parseInt(credit.vote_average * 10)}%</div>
+                            <img src={credit.poster_path !== null ? `https://image.tmdb.org/t/p/w500/${credit.poster_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
+                            <h4 className='movname'>{credit.original_title || credit.original_name}</h4>
+                            {people.known == "Acting" ? <h4 className='movchar'>{credit.character}</h4> : <></>}
                         </div>
                     </Link>
                 )) : <></>}

@@ -12,7 +12,7 @@ function Movie() {
     let [imdb, setImdb] = useState([])
     let { id } = useParams()
     let { type } = useParams()
-    let [logo, setLogo] = useState([])
+    let [logo, setLogo] = useState("")
     let [cast, setCast] = useState([])
     let [dir, setDir] = useState([])
     let [sound, setSound] = useState([])
@@ -29,7 +29,7 @@ function Movie() {
             setLast(details.last_episode_to_air)
             setSeason(details.seasons)
         }
-        console.log(cast)
+        // console.log(cast)
         // console.log(details.genres)
     }, [type, id, imdb])
 
@@ -52,7 +52,7 @@ function Movie() {
     // console.log(imdb)
 
     document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
-    document.title = `${details.title || details.name}`;
+    document.title = `Plotwist | ${details.title || details.name}`;
     return (
         <>
             <DetailsContext.Provider value={{ details, id, type, imdb, logo, setLogo, cast, dir, sound, setCast, setDir, setSound, seasons, setSeason, last, setLast, similar, setSimilar }}>
@@ -61,8 +61,8 @@ function Movie() {
                         <Details />
                         <Poster />
                     </div>
-                <Cast data={details} id={id} type={type} />
-            </div>
+                    <Cast data={details} id={id} type={type} />
+                </div>
             </DetailsContext.Provider>
         </>
     )

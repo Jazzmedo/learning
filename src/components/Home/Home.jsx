@@ -4,6 +4,11 @@ import Trending from "./Trending"
 function Home() {
     useEffect(()=>{
         document.title = "Plotwist";
+        Array.from(document.querySelectorAll('.preventt')).map(each => {
+            each.addEventListener('click', () => {
+                document.getElementById('dropdownMenu').style.display = 'none'
+            })
+        })
     },[])
 
     document.body.style.cssText=`background-image:url('${require("../../back.jpg")}')`
