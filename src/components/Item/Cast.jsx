@@ -33,7 +33,7 @@ function Cast() {
                 <Separator/>
                 <div className='widtho'>
                     <h1 className='casth'>Cast</h1>
-                    <div className="allcasting">
+                    <div className="allcasting flexing">
                         {Array.isArray(cast.cast) ? cast.cast.slice(0, 10).map((ele) => {
 
                             return <Link key={ele.id} to={`/person/${ele.id}`}>

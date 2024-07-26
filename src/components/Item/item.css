@@ -413,6 +413,9 @@
     align-items: center;
     justify-content: space-evenly;
 }
+.allcast .flexing{
+    display: flex;
+}
 
 .seasons {
     display: flex;
