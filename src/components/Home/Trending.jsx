@@ -2,44 +2,17 @@ import React from 'react'
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import TrendingData from './TrendingData';
+import { HomeContext } from '../context/HomeContext';
 
 
 
 // Make a request for a user with a given ID
 
-const Trending = ({ period }) => {
-    let [data, setData] = useState([])
-    let [dataa, setDataa] = useState([])
-    let [dataaa, setDataaa] = useState([])
+const Trending = () => {
+    let { data, dataa, dataaa, period } = useContext(HomeContext)
 
     useEffect(() => {
-        getTodos()
     }, [])
-
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            let temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-        return array;
-    }
-
-    function getTodos() {
-        axios.get(`https://api.themoviedb.org/3/trending/all/${period}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
-            let x = shuffle(res.data.results)
-            setData(Object.values(x).slice(0, 10))
-            // console.log(x)
-        })
-        axios.get("https://api.themoviedb.org/3/genre/movie/list?api_key=80db2c88f978a7c08fd8b402180ede6e").then((ress) => {
-            setDataa(ress.data.genres)
-        })
-        axios.get("https://api.themoviedb.org/3/genre/tv/list?api_key=80db2c88f978a7c08fd8b402180ede6e").then((resss) => {
-            setDataaa(resss.data.genres)
-            // console.log(dataaa)
-        })
-    }
 
     // console.log(dataaa)
     function mergeGenres(obj1, obj2) {

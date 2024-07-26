@@ -21,6 +21,8 @@ function Movie() {
     let [seasons, setSeason] = useState([])
     let [last, setLast] = useState([])
     let [similar, setSimilar] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
+
 
 
     useEffect(() => {
@@ -34,12 +36,12 @@ function Movie() {
         }
         if (details && imdb && similar) {
             setTimeout(() => {
-                setLoading(false)
-            }, 500);
+                setIsLoading(false)
+            }, 1000);
         }
         // console.log(cast)
         // console.log(details.genres)
-    }, [type, id, imdb])
+    }, [type, id, imdb, isLoading])
 
     function getLogo() {
         axios.get(`https://api.themoviedb.org/3/${type}/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((ress) => {
@@ -61,20 +63,20 @@ function Movie() {
 
     document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
     document.title = `Plotwist | ${details.title || details.name}`;
-    if (loading) {
-        return <Loading />;  // Display the Loading component while data is being fetched
-    }
     return (
         <>
-            <DetailsContext.Provider value={{ details, id, type, imdb, logo, setLogo, cast, dir, sound, setCast, setDir, setSound, seasons, setSeason, last, setLast, similar, setSimilar }}>
-                <div className="alll">
-                    <div className="flexonlyys">
-                        <Details />
-                        <Poster />
+            <Loading isLoading={isLoading} />
+            {!isLoading && <>
+                <DetailsContext.Provider value={{ details, id, type, imdb, logo, setLogo, cast, dir, sound, setCast, setDir, setSound, seasons, setSeason, last, setLast, similar, setSimilar }}>
+                    <div className="alll">
+                        <div className="flexonlyys">
+                            <Details />
+                            <Poster />
+                        </div>
+                        <Cast data={details} id={id} type={type} />
                     </div>
-                    <Cast data={details} id={id} type={type} />
-                </div>
-            </DetailsContext.Provider>
+                </DetailsContext.Provider>
+            </>}
         </>
     )
 }

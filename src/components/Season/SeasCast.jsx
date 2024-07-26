@@ -10,7 +10,7 @@ function SeasCast() {
     let { cast, setCast, episodes, id, seasnum } = useContext(SeasonContext)
     useEffect(() => {
 
-        if (id && seasnum>0) { // Check if seasnum is defined before calling getCast
+        if (id && seasnum > 0) { // Check if seasnum is defined before calling getCast
             getCast()
         }
     }, [id, seasnum]) // Include seasnum in the dependency array
@@ -24,23 +24,31 @@ function SeasCast() {
 
     }
 
-    // console.log(cast)
+    console.log(cast.cast)
 
     return (
         <>
             <Separator />
             <div className='widthoo'>
-                <h1 className='trendssss trendsss'>Cast</h1>
-                <div className="allcastingg">
-                    {cast.cast ? cast.cast.slice(0, 10).map((ele) => {
-                        return <Link key={ele.id} to={`/person/${ele.id}`}>
-                            <div key={ele.id} className='castcontt'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
-                                <h4 className='castnamee'>{ele.name}</h4>
-                                <h4 className='castcharr'>{ele.character}</h4>
-                            </div>
-                        </Link>
-                    }) : <></>}
-                </div>
+                {cast.cast && cast.cast.length > 0 ? (
+                    <>
+                        <h1 className='trendssss trendsss'>Cast</h1>
+                        <div className="allcastingg">
+                            {cast.cast.slice(0, 10).map((ele) => (
+                                <Link key={ele.id} to={`/person/${ele.id}`}>
+                                    <div className='castcontt'>
+                                        <img 
+                                            src={ele.profile_path ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} 
+                                            alt={ele.name} 
+                                        />
+                                        <h4 className='castnamee'>{ele.name}</h4>
+                                        <h4 className='castcharr'>{ele.character}</h4>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </>
+                ) : null}
             </div>
         </>
     )

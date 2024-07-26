@@ -2,28 +2,20 @@ import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import '../Season/season.css'
+import { HomeContext } from '../context/HomeContext'
 
 
 function NowPlaying(ele) {
-    let [data, setData] = useState([])
-
-    function getData() {
-        axios.get(`https://api.themoviedb.org/3/${ele.type}/${ele.query}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
-            setData(res.data.results.slice(0, 8))
-        })
-    }
-
     useEffect(() => {
-        getData()
 
-    }, [])
+    }, [ele])
 
-    // console.log(ele.query)
+    // console.log(ele)
     return (
         <>
             <h1 className='trendsss trendssss'>{ele.query == "on_the_air" ? "Airing Now TV Shows" : "Now Playing Movies"}</h1>
             <div className="cardssss">
-                {data.map(item => (
+                {ele.data.map(item => (
                     <Link className="oncarddd" to={`/${ele.type}/${item.id}`}>
                         {/* {console.log(item)} */}
                         <img className="posterrrr" src={item.backdrop_path ? `https://image.tmdb.org/t/p/w500/${item.backdrop_path}` : require(`../Season/asdfs.jpg`)} />

@@ -1,16 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { CSSTransition } from 'react-transition-group';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './loading.css'
 
-function Loading() {
-    document.body.style.cssText = `background-image:url('${require("../../back.jpg")}')`
+function Loading({ isLoading }) {
+    useEffect(() => {
+        document.body.style.backgroundImage = `url(${require("../../back.jpg")})`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+        
+        return () => {
+            document.body.style.backgroundImage = '';
+            document.body.style.backgroundSize = '';
+            document.body.style.backgroundPosition = '';
+        };
+    }, []);
+
     return (
-        <div>
-            <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-                <div className="spinner-border text-light" style={{ width: '10rem', height: '10rem' }} role="status">
-                    <span className="visually-hidden">Loading...</span>
+        <CSSTransition
+            in={isLoading}
+            timeout={300}
+            classNames="fade"
+            unmountOnExit
+        >
+            <div className="loading-container">
+                <div className="loading-content">
+                    <div className="spinner-border text-light custom-spinner" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                    <h2 className="loading-text">Loading...</h2>
                 </div>
             </div>
-        </div>
+        </CSSTransition>
     )
 }
 

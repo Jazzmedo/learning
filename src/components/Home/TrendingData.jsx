@@ -26,7 +26,7 @@ function TrendingData({ ele, genre }) {
     }
 
     const backgroundStyle = {
-        backgroundImage: `url(https://image.tmdb.org/t/p/original/${ele.backdrop_path})`
+        backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${ele.backdrop_path})`
     }
 
     return (

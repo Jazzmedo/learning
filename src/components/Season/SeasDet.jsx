@@ -4,6 +4,7 @@ import axios from 'axios'
 import SeasPost from './SeasPost'
 import SeasCast from './SeasCast'
 import Episode from './SeasEpis'
+import Loading from '../Loading/Loading'
 import './season.css'
 import '../Item/item.css'
 import { SeasonContext } from '../context/SeasonContext'
@@ -16,8 +17,12 @@ function SeasDet() {
     let [cast, setCast] = useState([])
     let [logo, setLogo] = useState([])
     let [seasnum, setSeasnum] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
+
+
 
     useEffect(() => {
+        document.getElementById("Nv").scrollIntoView({ behavior: "smooth" });
         getData()
         if (back.name && episodes.name) {
             document.title = `Plotwist | ${back.name} | ${episodes.name}`;
@@ -27,6 +32,9 @@ function SeasDet() {
             setLength(episodes.episodes.length)
         }
         document.body.style.cssText = `background-image:url(https://image.tmdb.org/t/p/original/${back.backdrop_path})`
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000);
     }, [back.name, episodes.name, seasnum])
 
     function getData() {
@@ -47,22 +55,25 @@ function SeasDet() {
             }
         });
     }
-    console.log(back)
+    // console.log(back)
     // console.log(back)
     if (episodes && back) {
 
         return (
             <>
-                <SeasonContext.Provider value={{ id, sid, episodes, setEpisodes, back, setBack, lengthh, setLength, cast, setCast, logo, seasnum }}>
-                    <div className="allseas">
-                        <div className="seasondet">
-                            <SeasPost />
-                            <div className="sep"> </div>
-                            <Episode />
+                <Loading isLoading={isLoading} />
+                {!isLoading && <>
+                    <SeasonContext.Provider value={{ id, sid, episodes, setEpisodes, back, setBack, lengthh, setLength, cast, setCast, logo, seasnum }}>
+                        <div className="allseas">
+                            <div className="seasondet">
+                                <SeasPost />
+                                <div className="sep"> </div>
+                                <Episode />
+                            </div>
+                            <SeasCast />
                         </div>
-                        <SeasCast />
-                    </div>
-                </SeasonContext.Provider>
+                    </SeasonContext.Provider>
+                </>}
             </>
         )
     }
