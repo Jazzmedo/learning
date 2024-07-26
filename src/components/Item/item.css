@@ -288,12 +288,12 @@
     }
 
     .allcasting {
-        display: flex;
         align-items: flex-start;
         justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
         margin: 0 2rem;
+        display: flex;
 
         a {
             text-decoration: none;
