@@ -12,15 +12,19 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
+    "dgram-browserify": "^0.0.13",
+    "drag-drop": "^7.2.0",
     "fontawesome-free": "^1.0.4",
     "fs": "^0.0.1-security",
+    "k-rpc-socket": "^1.11.1",
     "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.0",
     "react-scripts": "5.0.1",
     "swiper": "^11.1.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webtorrent": "^2.4.12"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,5 +55,8 @@
   "devDependencies": {
     "css-loader": "^7.1.2",
     "gh-pages": "^6.1.1"
+  },
+  "browser": {
+    "crypto": false
   }
 }

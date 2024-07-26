@@ -36,9 +36,9 @@ const router = createBrowserRouter([
                 element: <People />
             },
             {
-                path:"/*",
-                element: <NotFound/>
-            }
+                path: "/*",
+                element: <NotFound />
+            },
         ],
     },
 ])

@@ -45,7 +45,7 @@ function Cast() {
                         }) : <></>}
                     </div>
                     {type == "movie" ? <>
-                        <div className="crew">
+                        <div className="crew flexing">
                             <div className='castcont crew must obey'>
                                 <h1 className='casth'>Director</h1>
                                 <Link to={`/person/${dir.id}`}>
