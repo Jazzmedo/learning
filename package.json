@@ -1,5 +1,5 @@
 {
-  "homepage": "https://jazzmedo.github.io/learning",
+  "homepage": "https://jazzmedo.github.io/learning/",
   "name": "learning",
   "version": "0.1.0",
   "private": true,
@@ -14,7 +14,6 @@
     "bootstrap": "^5.3.3",
     "fontawesome-free": "^1.0.4",
     "fs": "^0.0.1-security",
-    "gh-pages": "^6.1.1",
     "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -50,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "css-loader": "^7.1.2"
+    "css-loader": "^7.1.2",
+    "gh-pages": "^6.1.1"
   }
 }
