@@ -197,3 +197,198 @@
 .vote span {
     font-family: 'Cairo', sans-serif;
 }
+
+.cardssss {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.oncarddd {
+    width: 20%;
+    max-width: 29%;
+    height: 192px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-radius: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.posterrrr {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    filter: blur(0.5px);
+    transition: all 0.3s ease-in-out;
+    top: 0;
+    left: 0;
+}
+
+.numberep {
+    position: absolute;
+    width: auto;
+    height: 2.5rem;
+    top: -10px;
+    left: -10px;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    background-color: #000000a5;
+    border: 1.5px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.9rem;
+}
+
+.numberepp {
+    position: absolute;
+    width: 70px;
+    height: auto;
+    bottom: 30px;
+    left: 15px;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    filter: brightness(0.8);
+    box-shadow: 0 0 0px 0px #00000082;
+}
+
+.voteepp {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: -10px;
+    right: -10px;
+    z-index: 10;
+    background-color: #006671cc;
+    border: 1.5px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.9rem;
+}
+
+.episdetss {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 35%;
+    color: #ffffffc4;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 1rem;
+    transition: all 0.3s ease-in-out;
+
+    h5 {
+        text-wrap: wrap;
+        max-width: 55%;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.septer {
+    width: 2px;
+    height: 70%;
+    margin: 2rem 1rem;
+    background-color: #ffffff8b;
+    transition: all 0.3s ease-in-out;
+}
+
+.epnammma.fsdads {
+    width: 65px;
+    height: auto;
+    min-width: 65px;
+}
+
+#epnammmaa {
+    font-size: 1.05rem;
+    z-index: 10;
+}
+
+.nameeeee {
+    font-size: 0.9rem;
+    color: #ffffffc4;
+}
+
+.detsdetss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    transition: all 0.3s ease-in-out;
+    gap: 0.25rem;
+
+    * {
+        padding: 0;
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.oncarddd:hover {
+    transform: scale(1.05);
+
+    .posterrrr {
+        filter: blur(0px);
+    }
+
+    .septer {
+        background-color: #fff;
+    }
+
+    .numberepp {
+        filter: brightness(1);
+        box-shadow: 0 0 2px 2px #00000082;
+    }
+
+    .detsdets {
+        h6 {
+            color: #fff;
+        }
+    }
+
+    .voteepp {
+        background-color: #006671;
+    }
+
+    .numberep {
+        background-color: #000;
+    }
+
+    .episdetss {
+        background-color: rgba(0, 0, 0, 0.7);
+
+        .nameeeee {
+            color: #ffffff;
+        }
+    }
+}
+
+.trendsss.trendssss {
+    margin-top: 1rem;
+}

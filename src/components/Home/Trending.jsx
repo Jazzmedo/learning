@@ -1,8 +1,7 @@
 import React from 'react'
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import TrendingData from './TrendingData';
-import { Link } from 'react-router-dom';
 
 
 
@@ -30,7 +29,7 @@ const Trending = ({ period }) => {
     function getTodos() {
         axios.get(`https://api.themoviedb.org/3/trending/all/${period}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
             let x = shuffle(res.data.results)
-            setData(Object.values(x).slice(0, 8))
+            setData(Object.values(x).slice(0, 10))
             // console.log(x)
         })
         axios.get("https://api.themoviedb.org/3/genre/movie/list?api_key=80db2c88f978a7c08fd8b402180ede6e").then((ress) => {
@@ -66,7 +65,7 @@ const Trending = ({ period }) => {
     // console.log(finalObject)
     return (
         <>
-            <h1>{period == "day" ? "Today" : "Weekly"} Trendings</h1>
+            <h1 className='trendsss'>{period == "day" ? "Today" : "Weekly"} Trendings</h1>
             <div className="containerr boxedd">
                 {data.map(ele => {
                     let genre = ele.genre_ids.map(id => {

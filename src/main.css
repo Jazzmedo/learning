@@ -59,12 +59,16 @@ body {
   backdrop-filter: blur(0px);
 }
 
-h1 {
+.trendsss {
   font-size: 2.5rem;
   font-family: "ADLaM Display", sans-serif;
   margin: 3rem auto 1.5rem;
   width: fit-content;
-  color: white;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+.trendsss:hover {
+  color: rgb(255, 255, 255);
 }
 
 .spacee {
@@ -128,4 +132,24 @@ a {
   width: 2.5vw;
   font-size: 12px;
   height: 2.5vw;
+}
+
+.sepssa{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  filter: brightness(0.6);
+  transition: all 0.3s ease-in-out;
+  .line{
+    width:20%;
+    height: 3px;
+    background-color: #ffffff58;
+  }
+}
+
+.sepssa:hover{
+  filter: brightness(1);
 }

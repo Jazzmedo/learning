@@ -276,10 +276,10 @@
     justify-content: space-around;
     gap: 2rem;
     padding-bottom: 4rem;
-    padding-top: 2rem;
     margin-top: 4rem;
 
     .casth {
+        text-align: center;
         font-family: "ADLaM Display", sans-serif;
         color: #ffffffea;
         font-size: 40px;
@@ -461,7 +461,7 @@
 }
 
 .widtho {
-    width: fit-content;
+    width: 100%;
 }
 
 .oneseason {

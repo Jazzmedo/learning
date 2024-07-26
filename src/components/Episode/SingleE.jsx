@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react'
 import axios from 'axios'
+import Separator from '../Home/Separator'
 import { useParams,Link } from 'react-router-dom'
 import { EpisodeContext } from '../context/EpisodeContext'
 import './epi.css'
@@ -37,7 +38,7 @@ function SingleE() {
                             <div className="votinggg force">{parseInt(episodes.vote_average * 10)}%</div>
                         </div>
                         <div className="epipdetails">
-                            <h1>{episodes.name}</h1>
+                            <h1 className='trendsss white more'>{episodes.name}</h1>
                             <h3><span>Season : {episodes.season_number}</span>
                                 <span>Episode : {episodes.episode_number}</span>
                                 <span>Duration : {episodes.runtime >= 60 ? `${parseInt(episodes.runtime / 60)}h` : ""} {episodes.runtime % 60 != 0 ? `${episodes.runtime % 60}m` : ""}</span>
@@ -45,8 +46,9 @@ function SingleE() {
                             <p className='paragraph'>{episodes.overview}</p>
                         </div>
                     </div>
+                    <Separator />
                     <div className='widthoo'>
-                        <h1 className='casthh'>Cast</h1>
+                        <h1 className='trendsss trendssss'>Cast</h1>
                         <div className="allcastingg">
                             {episodes.guest_stars ? episodes.guest_stars.slice(0, 10).map((ele) => {
                                 return <Link key={ele.id} to={`/person/${ele.id}`}>

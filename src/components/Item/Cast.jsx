@@ -2,6 +2,7 @@ import React, { useEffect, useState,useContext } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Seasons from './Seasons'
+import Separator from '../Home/Separator'
 import Similar from './Similar'
 import {DetailsContext} from '../context/DetailsContextProvider.jsx'
 
@@ -29,8 +30,8 @@ function Cast() {
     return (
         <>
             <div className="allcast">
+                <Separator/>
                 <div className='widtho'>
-
                     <h1 className='casth'>Cast</h1>
                     <div className="allcasting">
                         {Array.isArray(cast.cast) ? cast.cast.slice(0, 10).map((ele) => {
@@ -65,6 +66,7 @@ function Cast() {
                         : <></>}
                 </div>
                 {type == "tv" ? <Seasons></Seasons> : <></>}
+                <Separator/>
                 <Similar></Similar>
             </div>
 

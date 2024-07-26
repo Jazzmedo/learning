@@ -1,8 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import './components/Home/style.css';
-import './main.css';
+import '../Home/style.css';
+import '../../main.css';
 import './navbar.css';
 import React, { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faTv, faFilm } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 
@@ -66,13 +68,10 @@ function Navbar() {
     return (
         <>
             <nav id="Nv" className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link className="navbar-brand preventt" to="/Home"><img src={require("./logo/wlogo.png")} height="24" /></Link>
+                <Link className="navbar-brand preventt" to=""><img src={require("../../logo/wlogo.png")} height="24" /></Link>
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item active ">
-                        <Link className="nav-link preventt" to="/Home">Home</Link>
-                    </li>
-                    <li className="nav-item preventt">
-                        <Link className="nav-link disabled preventt" to="/Explore">Explore</Link>
+                        <Link className="nav-link preventt" to="">Home</Link>
                     </li>
                     <li className="nav-item preventt">
                         <Link className="nav-link disabled preventt" to="/Movies">Movies</Link>
@@ -88,7 +87,11 @@ function Navbar() {
                             item ? (
                                 <>
                                     <Link key={item.id} to={`/${item.media_type}/${item.id}`} className="dropdown-item">
-                                        <span className='typee'>{item.media_type}</span> : {item.original_title || item.original_name} <span>{item.media_type === 'tv' ? (item.first_air_date ? `(${item.first_air_date.split("-")[0]})` : '') : (item.release_date ? `(${item.release_date.split("-")[0]})` : '')}</span>
+                                        <span className='typee'>
+                                            {item.media_type === 'person' ? <FontAwesomeIcon icon={faUser} /> :
+                                             item.media_type === 'tv' ? <FontAwesomeIcon icon={faTv} /> :
+                                             <FontAwesomeIcon icon={faFilm} />}
+                                        </span> : {item.original_title || item.original_name} <span>{item.media_type === 'tv' ? (item.first_air_date ? `(${item.first_air_date.split("-")[0]})` : '') : (item.release_date ? `(${item.release_date.split("-")[0]})` : '')}</span>
                                     </Link>
                                 </>
                             ) : <></>) : <div>No results found</div>}

@@ -2,6 +2,7 @@ import React from 'react';
 import Movie from "./components/Item/Movie"
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import NotFound from './components/notfound/NotFound';
 import SeasDet from './components/Season/SeasDet';
 import SingleE from './components/Episode/SingleE';
 import Home from './components/Home/Home'
@@ -14,10 +15,6 @@ const router = createBrowserRouter([
         path: "",
         element: <App />,
         children: [
-            {
-                path: "/Home",
-                element: <Home />
-            },
             {
                 path: "/:type/:id",
                 element: <Movie />
@@ -37,6 +34,10 @@ const router = createBrowserRouter([
             {
                 path: "/person/:pid",
                 element: <People />
+            },
+            {
+                path:"/*",
+                element: <NotFound/>
             }
         ],
     },

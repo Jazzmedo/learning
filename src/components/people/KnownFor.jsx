@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Separator from '../Home/Separator'
 
 function KnownFor(people) {
     let [credits, setCredits] = useState([])
@@ -57,7 +58,8 @@ function KnownFor(people) {
     console.log(credits)
     return (
         <>
-            <h1>Known For</h1>
+            <Separator />
+            <h1 className='trendsss trendssss'>Known For</h1>
             <div className="allmov">
                 {credits ? credits.map((credit) => (
                     <Link key={credit.id} to={`/${credit.media_type}/${credit.id}`}>

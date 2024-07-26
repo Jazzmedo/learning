@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { SeasonContext } from '../context/SeasonContext'
+import Separator from '../Home/Separator'
 
 function SeasCast() {
 
@@ -27,8 +28,9 @@ function SeasCast() {
 
     return (
         <>
+            <Separator />
             <div className='widthoo'>
-                <h1 className='casthh'>Cast</h1>
+                <h1 className='trendssss trendsss'>Cast</h1>
                 <div className="allcastingg">
                     {cast.cast ? cast.cast.slice(0, 10).map((ele) => {
                         return <Link key={ele.id} to={`/person/${ele.id}`}>
