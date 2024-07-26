@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import Details from './Details'
+import Loading from '../Loading/Loading'
 import Poster from './Poster'
 import Cast from './Cast'
 import { DetailsContext } from '../context/DetailsContextProvider'
@@ -31,6 +32,11 @@ function Movie() {
             setLast(details.last_episode_to_air)
             setSeason(details.seasons)
         }
+        if (details && imdb && similar) {
+            setTimeout(() => {
+                setLoading(false)
+            }, 500);
+        }
         // console.log(cast)
         // console.log(details.genres)
     }, [type, id, imdb])
@@ -55,6 +61,9 @@ function Movie() {
 
     document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
     document.title = `Plotwist | ${details.title || details.name}`;
+    if (loading) {
+        return <Loading />;  // Display the Loading component while data is being fetched
+    }
     return (
         <>
             <DetailsContext.Provider value={{ details, id, type, imdb, logo, setLogo, cast, dir, sound, setCast, setDir, setSound, seasons, setSeason, last, setLast, similar, setSimilar }}>
