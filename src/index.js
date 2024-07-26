@@ -8,6 +8,7 @@ import SingleE from './components/Episode/SingleE';
 import Home from './components/Home/Home'
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import People from './components/people/People';
+import Player from './components/player/Player';
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: "/*",
                 element: <NotFound />
+            },
+            {
+                path: "/player",
+                element: <Player/>
             },
         ],
     },

@@ -70,12 +70,10 @@ function Home() {
                     <Trending />
                     {/* <Trending period="week"/> */}
                     <Separator />
-
                     <NowPlaying data={movie} type="movie" query="now_playing" />
                     <Separator />
                     <NowPlaying data={tv} type="tv" query="on_the_air" />
                     <Separator />
-
                 </HomeContext.Provider>
             </>}
         </>
