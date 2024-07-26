@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/learning/static/css/main.036adc7e.css",
-    "main.js": "/learning/static/js/main.b2cdcaca.js",
+    "main.js": "/learning/static/js/main.d57aff31.js",
     "static/media/pxfuel.jpg": "/learning/static/media/pxfuel.97d6c3e139d05651b472.jpg",
     "static/media/back.jpg": "/learning/static/media/back.ba5e868e979894ae457e.jpg",
     "static/media/logo512.png": "/learning/static/media/logo512.8cd61a99aefff834d7e0.png",
@@ -9,10 +9,10 @@
     "static/media/asdfs.jpg": "/learning/static/media/asdfs.c9e1bd67786aff347b94.jpg",
     "index.html": "/learning/index.html",
     "main.036adc7e.css.map": "/learning/static/css/main.036adc7e.css.map",
-    "main.b2cdcaca.js.map": "/learning/static/js/main.b2cdcaca.js.map"
+    "main.d57aff31.js.map": "/learning/static/js/main.d57aff31.js.map"
   },
   "entrypoints": [
     "static/css/main.036adc7e.css",
-    "static/js/main.b2cdcaca.js"
+    "static/js/main.d57aff31.js"
   ]
 }
