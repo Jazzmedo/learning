@@ -8,6 +8,7 @@ import SingleE from './components/Episode/SingleE';
 import Home from './components/Home/Home'
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import People from './components/people/People';
+import MovieSec from './components/movieSection/MovieSec';
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 path: "/:type/:id",
                 element: <Movie />
+            },
+            {
+                path: "/movies",
+                element: <MovieSec />
             },
             {
                 path: "/tv/:id/season/:sid",

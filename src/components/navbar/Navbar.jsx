@@ -74,7 +74,7 @@ function Navbar() {
                         <Link className="nav-link preventt" to="">Home</Link>
                     </li>
                     <li className="nav-item preventt">
-                        <Link className="nav-link disabled preventt" to="/Movies">Movies</Link>
+                        <Link className="nav-link preventt" to="/Movies">Movies</Link>
                     </li>
                     <li className="nav-item preventt">
                         <Link className="nav-link disabled preventt" href="/TV">TV Shows</Link>

@@ -21,10 +21,19 @@ function Networks() {
         }
     }
 
-    // console.log(id)
+    console.log(data)
     return (
         <div className='flexonlyy' style={{"gap":"1rem"}}>
-            {Array.isArray(data.networks)? data.networks.map(net=><div key={net.id} className="flexonlyy"><img className='netw' src={`https://image.tmdb.org/t/p/original/${net.logo_path}`}/></div>):<></>}
+            <div className="flexonlyy">
+                <a className='fgsdasd' href={data.name ? `https://ext.to/search/?q=${data.name.split(" ").join("+")}` : '#'}>
+                    <img className='netw' src={`https://ext.to/static/img/ext_logo.png`}/>
+                </a>
+            </div>
+            {Array.isArray(data.networks) ? data.networks.map(net => (
+                <div key={net.id} className="flexonlyy">
+                    <img className='netw' src={`https://image.tmdb.org/t/p/original/${net.logo_path}`}/>
+                </div>
+            )) : <></>}
         </div>
     )
 }

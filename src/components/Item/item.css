@@ -253,6 +253,12 @@
 
 }
 
+.fgsdasd{
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+}
+
 .flexonlyys {
     display: flex;
     align-items: flex-start;

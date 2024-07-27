@@ -59,7 +59,7 @@ function Movie() {
         }
 
     }
-    // console.log(imdb)
+    console.log(details)
 
     document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
     document.title = `Plotwist | ${details.title || details.name}`;

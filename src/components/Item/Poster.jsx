@@ -25,7 +25,7 @@ function Poster() {
                     </div>
                 </div>
 
-                {type == "tv" ? <><h2 className='watchnow'>Watch Now</h2> <Networks /></> : <></>}
+                <><h2 className='watchnow'>Watch Now</h2> <Networks /></>
             </div>
 
         </>
