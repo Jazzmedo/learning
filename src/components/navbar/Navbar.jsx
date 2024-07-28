@@ -77,11 +77,11 @@ function Navbar() {
                         <Link className="nav-link preventt" to="/Movies">Movies</Link>
                     </li>
                     <li className="nav-item preventt">
-                        <Link className="nav-link disabled preventt" href="/TV">TV Shows</Link>
+                        <Link className="nav-link preventt" to="/TV">TV Shows</Link>
                     </li>
                 </ul>
                 <div className="search-bar">
-                    <input value={searchh} type="text" placeholder="Search..." id="searchInput" autocomplete="off" onChange={(e) => setSearchh(e.target.value)}  />
+                    <input value={searchh} type="text" placeholder="Search..." id="searchInput" autocomplete="off" onChange={(e) => setSearchh(e.target.value)} />
                     <div className="dropdown-menu" id="dropdownMenu">
                         {results.length > 0 ? results.map(item =>
                             item ? (
@@ -89,8 +89,8 @@ function Navbar() {
                                     <Link key={item.id} to={`/${item.media_type}/${item.id}`} className="dropdown-item">
                                         <span className='typee'>
                                             {item.media_type === 'person' ? <FontAwesomeIcon icon={faUser} /> :
-                                             item.media_type === 'tv' ? <FontAwesomeIcon icon={faTv} /> :
-                                             <FontAwesomeIcon icon={faFilm} />}
+                                                item.media_type === 'tv' ? <FontAwesomeIcon icon={faTv} /> :
+                                                    <FontAwesomeIcon icon={faFilm} />}
                                         </span> : {item.original_title || item.original_name} <span>{item.media_type === 'tv' ? (item.first_air_date ? `(${item.first_air_date.split("-")[0]})` : '') : (item.release_date ? `(${item.release_date.split("-")[0]})` : '')}</span>
                                     </Link>
                                 </>

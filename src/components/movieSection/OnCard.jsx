@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 
-function OnCard({ movies }) { // Destructure movies from props
+function OnCard(ele) { 
+    useEffect(() => {
+    }, [ele])
+
+    console.log(ele.type)
     return (
         <>
             <div className="topratedd">
                 {
-                    movies.map(item => {
+                    ele.movies.map(item => {
                         return (
                             <Link className="oncarddd" to={`/movie/${item.id}`}>
                                 <img className="posterrrr" src={item.backdrop_path ? `https://image.tmdb.org/t/p/w500/${item.backdrop_path}` : require(`../Season/asdfs.jpg`)} />
@@ -17,7 +21,7 @@ function OnCard({ movies }) { // Destructure movies from props
                                     <h5 className='epnammma fsdads'></h5>
                                     <div className="septer"></div>
                                     <div className="detsdetss">
-                                        <h6 className='nameeeee'>{item.name || item.title} ({item.release_date && item.release_date.split("-")[0]})</h6>
+                                        <h6 className='nameeeee'>{item.name || item.title} ({item.release_date && item.release_date.split("-")[0] || item.first_air_date && item.first_air_date.split("-")[0]})</h6>
                                     </div>
                                 </div>
                             </Link>

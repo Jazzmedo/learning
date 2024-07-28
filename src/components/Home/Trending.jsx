@@ -35,7 +35,7 @@ const Trending = () => {
         return Object.values(mergedGenres);
     }
     let finalObject = mergeGenres(dataa, dataaa);
-    // console.log(finalObject)
+    console.log(finalObject)
     return (
         <>
             <h1 className='trendsss'>{period == "day" ? "Today" : "Weekly"} Trendings</h1>

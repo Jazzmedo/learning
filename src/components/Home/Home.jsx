@@ -68,7 +68,6 @@ function Home() {
             {!isLoading && <>
                 <HomeContext.Provider value={{ data, setData, dataa, setDataa, dataaa, setDataaa, period, movie, tv }}>
                     <Trending />
-                    {/* <Trending period="week"/> */}
                     <Separator />
                     <NowPlaying data={movie} type="movie" query="now_playing" />
                     <Separator />
