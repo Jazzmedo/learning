@@ -49,7 +49,7 @@ function People() {
                             <img src={`https://image.tmdb.org/t/p/w500/${people.profile_path}`} alt="" />
                         </div>
                         <div className="pdetails">
-                            <h1 className='trendsss trendssss' style={{color: 'white'}}>{people.name}</h1>
+                            <h1 className='trendsss trendssss' style={{ color: '#ffddc9' }}>{people.name}</h1>
                             <h3><span>Known For : {people.known_for_department == "Sound" ? "Music Composer" : people.known_for_department == "Acting" ? "Actor" : "Director"}</span><span>Birthday : {people.birthday}</span><span>Place of Birth : {people.place_of_birth}</span></h3>
                             <p className='paragraph' onClick={handleParagraphClick}>{people.biography}</p>
                             <div className="redirect">

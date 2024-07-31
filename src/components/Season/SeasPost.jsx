@@ -16,7 +16,6 @@ function SeasPost() {
                     <Link className='preventt' to={`/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
                     <div className="seasvote">
                         <h3 className='seasname'>{episodes.name}</h3>
-                        <h3 className='voteseas'>{parseInt(episodes.vote_average * 10)}% </h3>
                     </div>
                 </div>
                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', borderTop: '1px solid #fff', paddingTop: '10px' }}>Watch Now</h2>

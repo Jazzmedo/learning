@@ -13,7 +13,7 @@ function OnCard(ele) {
                 {
                     ele.movies.map(item => {
                         return (
-                            <Link className="oncarddd" to={`/movie/${item.id}`}>
+                            <Link className="oncarddd" to={`/${ele.type}/${item.id}`}>
                                 <img className="posterrrr" src={item.backdrop_path ? `https://image.tmdb.org/t/p/w500/${item.backdrop_path}` : require(`../Season/asdfs.jpg`)} />
                                 <img className='numberepp' src={item.poster_path ? `https://image.tmdb.org/t/p/w500/${item.poster_path}` : `https://imgur.com/IqNlhr9.jpeg`} />
                                 <div className="voteepp">{parseInt(item.vote_average * 10)}%</div>

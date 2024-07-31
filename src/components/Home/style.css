@@ -1,7 +1,7 @@
 .boxedd {
     height: fit-content;
     display: flex;
-    border-right: 0.3rem solid #ffffff;
+    border-right: 0.3rem solid #ffddc9;
     max-width: 90%;
     margin: 0 auto;
 
@@ -14,9 +14,9 @@
         background-position: center;
         transition: flex 0.3s ease-in-out;
         position: relative;
-        border-bottom: 0.3rem solid #ffffff;
-        border-top: 0.3rem solid #ffffff;
-        border-left: 0.3rem solid #ffffff;
+        border-bottom: 0.3rem solid #ffddc9;
+        border-top: 0.3rem solid #ffddc9;
+        border-left: 0.3rem solid #ffddc9;
         overflow: hidden;
     }
 
@@ -51,14 +51,14 @@
         position: absolute;
         left: 2vw;
         top: 77%;
-        color: #dcdcdc;
+        color: #ffddc9;
         transition: all 0.3s ease-in-out;
         font-size: 0vw;
         font-weight: 500;
         opacity: 0%;
 
         span {
-            color: #dcdcdc98;
+            color: #ffddc998;
             font-size: 1.3vw;
             vertical-align: middle;
             padding-bottom: 8px;
@@ -70,7 +70,7 @@
         position: absolute;
         left: 1.9vw;
         top: 85%;
-        color: #ffffff;
+        color: #ffddc9;
         transition: opacity 0.3s ease-in-out;
         font-size: 0.9vw;
         font-weight: 500;
@@ -84,7 +84,7 @@
         position: absolute;
         left: 1.9vw;
         top: 87%;
-        color: #ffffff;
+        color: #ffddc9;
         transition: opacity 0.3s ease-in-out;
         font-size: 1.5vw;
         font-weight: 500;
@@ -148,7 +148,7 @@
     position: absolute;
     left: 1.9vw;
     top: 87%;
-    color: #ffffff;
+    color: #ffddc9;
     transition: opacity 0.3s ease-in-out;
     font-size: 1.5vw;
     font-weight: 500;
@@ -167,9 +167,9 @@
 .genre {
     height: fit-content;
     width: fit-content;
-    background-color: #ffffff50;
+    background-color: #ffddc950;
     backdrop-filter: blur(10px);
-    color: white;
+    color: #ffddc9;
     padding: 8px;
     border-radius: 50px;
     font-size: 12px;
@@ -179,7 +179,7 @@
 }
 
 .genre:hover {
-    background-color: #ffffff;
+    background-color: #ffddc9;
     color: #000000;
 }
 
@@ -187,7 +187,7 @@
     height: 30px;
     text-align: center;
     width: 55px;
-    background-color: #ffffff50;
+    background-color: #ffddc950;
     padding: 7px;
     border-radius: 10px;
     cursor: pointer;
@@ -244,9 +244,9 @@
     z-index: 10;
     transition: all 0.3s ease-in-out;
     background-color: #000000a5;
-    border: 1.5px solid #fff;
+    border: 1.5px solid #ffddc9;
     border-radius: 100px;
-    color: #fff;
+    color: #ffddc9;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -263,7 +263,7 @@
     z-index: 10;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
-    color: #fff;
+    color: #ffddc9;
     font-size: 1.1rem;
     filter: brightness(0.8);
     box-shadow: 0 0 0px 0px #00000082;
@@ -277,9 +277,9 @@
     right: -10px;
     z-index: 10;
     background-color: #006671cc;
-    border: 1.5px solid #fff;
+    border: 1.5px solid #ffddc9;
     border-radius: 100px;
-    color: #fff;
+    color: #ffddc9;
     font-size: 0.8rem;
     display: flex;
     transition: all 0.3s ease-in-out;
@@ -295,7 +295,7 @@
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
     height: 35%;
-    color: #ffffffc4;
+    color: #ffddc9c4;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 10px;
     display: flex;
@@ -316,7 +316,7 @@
     width: 2px;
     height: 70%;
     margin: 2rem 1rem;
-    background-color: #ffffff8b;
+    background-color: #ffddc98b;
     transition: all 0.3s ease-in-out;
 }
 
@@ -333,7 +333,7 @@
 
 .nameeeee {
     font-size: 0.9rem;
-    color: #ffffffc4;
+    color: #ffddc9c4;
 }
 
 .detsdetss {
@@ -360,7 +360,7 @@
     }
 
     .septer {
-        background-color: #fff;
+        background-color: #ffddc9;
     }
 
     .numberepp {
@@ -370,7 +370,7 @@
 
     .detsdets {
         h6 {
-            color: #fff;
+            color: #ffddc9;
         }
     }
 
@@ -386,11 +386,56 @@
         background-color: rgba(0, 0, 0, 0.7);
 
         .nameeeee {
-            color: #ffffff;
+            color: #ffddc9;
         }
     }
 }
 
 .trendsss.trendssss {
     margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Tablets and below */
+    .boxedd {
+        flex-direction: column;
+    }
+
+    .conn {
+        height: auto; /* Adjust height for smaller screens */
+        flex: 1; /* Take full width on smaller screens */
+    }
+
+    .conn .logo, .conn h3, .conn h4, .conn p {
+        font-size: 4vw; /* Increase font size for better readability */
+    }
+
+    .genres {
+        flex-direction: column; /* Stack genre items vertically */
+        gap: 0.5rem;
+    }
+
+    .oncarddd {
+        width: 100%; /* Full width cards */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile devices */
+    .conn .logo, .conn h3, .conn h4, .conn p {
+        font-size: 6vw; /* Further increase font size for very small screens */
+    }
+
+    .genres {
+        width: 100%; /* Full width genre container */
+    }
+
+    .oncarddd {
+        flex-direction: row; /* Change layout for better use of space */
+        justify-content: space-between;
+    }
+
+    .posterrrr, .numberep, .voteepp {
+        display: none; /* Hide elements to simplify the view */
+    }
 }

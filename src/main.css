@@ -25,11 +25,11 @@
 
 *::-webkit-scrollbar-track {
   border-radius: 6px;
-  background-color: #FFFFFF;
+  background-color: #ffddc9;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #FFFFFF;
+  background-color: #ffddc9;
 }
 
 *::-webkit-scrollbar-track:active {
@@ -64,11 +64,11 @@ body {
   font-family: "ADLaM Display", sans-serif;
   margin: 3rem auto 1.5rem;
   width: fit-content;
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffddc999;
   transition: all 0.3s ease-in-out;
 }
 .trendsss:hover {
-  color: rgb(255, 255, 255);
+  color: #ffddc9;
 }
 
 .spacee {
@@ -80,19 +80,29 @@ body {
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.75);
 
   img {
-    margin-top: 1rem;
+    margin-top: 0.3rem;
     margin-left: 2rem;
     cursor: pointer !important;
   }
 
   .nav-item * {
-    color: white;
+    color: #ffddc9;
     font-family: "ADLaM Display", sans-serif !important;
     cursor: pointer;
   }
 
   .navbar-nav {
-    margin-top: 1rem !important;
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  .preventt{
+    cursor: pointer !important;
+    width: fit-content !important;
+    max-width: fit-content !important;
+    a{
+      text-wrap: nowrap !important;
+    }
+
   }
 }
 
@@ -101,12 +111,12 @@ a {
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(255, 219, 199, 0.6) !important;
   transition: all 0.3s ease-in-out !important;
 }
 
 .nav-link:hover {
-  color: rgba(255, 255, 255, 1) !important;
+  color: #ffddc9 !important;
 }
 
 .votinggg.force {
@@ -152,4 +162,52 @@ a {
 
 .sepssa:hover{
   filter: brightness(1);
+}
+
+/* Responsive adjustments using media queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .trendsss {
+    font-size: 2rem; /* Smaller font size for tablets */
+  }
+
+  #Nv img {
+    margin-left: 1rem; /* Less margin for smaller screens */
+  }
+
+  .votinggg.force, .votinggg.force.another {
+    width: 5vw; /* Adjust size for visibility on tablets */
+    height: 5vw;
+  }
+
+  .sepssa .line {
+    width: 30%; /* Increase line width for better visibility */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .trendsss {
+    font-size: 1.5rem; /* Even smaller font size for mobiles */
+    margin: 2rem auto; /* Less vertical spacing */
+  }
+
+  #Nv {
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for better readability */
+  }
+
+  .votinggg.force, .votinggg.force.another {
+    width: 8vw; /* Larger touch targets for mobile */
+    height: 8vw;
+  }
+
+  .sepssa {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    gap: 0.5rem;
+  }
+
+  .sepssa .line {
+    width: 80%; /* Full width lines for narrow screens */
+  }
 }

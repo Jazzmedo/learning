@@ -37,7 +37,7 @@
 
 .details {
     padding: 20px;
-    color: white;
+    color: #ffddc9;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -90,7 +90,7 @@
 
         .rate:hover {
             color: #000;
-            background-color: #fff;
+            background-color: #ffddc9;
             border: 1px solid #000;
         }
     }
@@ -108,7 +108,7 @@
         height: 30px;
         text-align: center;
         width: 55px;
-        background-color: #ffffff;
+        background-color: #ffddc9;
         padding: 7px;
         border-radius: 10px;
         cursor: pointer;
@@ -126,7 +126,7 @@
         margin-top: 20px;
         gap: 1rem;
         align-items: flex-start;
-        color: #ffffff;
+        color: #ffddc9;
         transition: opacity 0.3s ease-in-out;
         font-size: 1.5vw;
         font-weight: 500;
@@ -146,7 +146,7 @@
     .genree {
         height: fit-content;
         width: fit-content;
-        background-color: #ffffff;
+        background-color: #ffddc9;
         backdrop-filter: blur(10px);
         color: rgb(0, 0, 0);
         padding: 8px;
@@ -159,7 +159,7 @@
     }
 
     .genree:hover {
-        color: #fff;
+        color: #ffddc9;
         background-color: #000;
         /* border: 1px solid #fff; */
     }
@@ -174,7 +174,7 @@
 .allpos {
     margin: 20px 120px 40px 30px;
     width: fit-content;
-    max-width: 40%;
+    /* max-width: 30%; */
     padding: 20px;
     background: linear-gradient(215deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
@@ -183,7 +183,6 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     transition: all 0.3s ease-in-out;
-    max-width: 25%;
 
     .flexmode {
         display: flex;
@@ -194,11 +193,11 @@
 
     .watchnow {
         margin-top: 15px;
-        border: 1px solid #ffffff58;
+        border: 1px solid #ffddc958;
         border-width: 2px 0 0 0;
         padding-top: 10px;
         font-family: "ADLaM Display", sans-serif;
-        color: #ffffffe8;
+        color: #ffddc9e8;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -207,20 +206,22 @@
 
     .posdet .posttle {
         font-family: "ADLaM Display", sans-serif;
-        color: #ffffffaa;
+        color: #ffddc9aa;
         font-size: 20px;
         padding-bottom: 10px;
+        max-width: 200px;
+        text-wrap: wrap;
     }
 
     .vote {
-        border-top: 2px dashed #ffffff58;
+        border-top: 2px dashed #ffddc958;
         padding-top: 10px;
         font-family: "ADLaM Display", sans-serif;
-        color: #ffffffaa;
+        color: #ffddc9aa;
         font-size: 20px;
 
         span {
-            color: #ffffff7a;
+            color: #ffddc97a;
             font-size: 16px;
         }
     }
@@ -237,7 +238,7 @@
         height: auto;
         text-align: center;
         width: 65px;
-        background-color: #ffffffdf;
+        background-color: #ffddc9df;
         padding: 7px;
         border-radius: 10px;
         cursor: pointer;
@@ -287,7 +288,7 @@
     .casth {
         text-align: center;
         font-family: "ADLaM Display", sans-serif;
-        color: #ffffffea;
+        color: #ffddc9ea;
         font-size: 40px;
         padding-bottom: 10px;
         margin: 0 auto;
@@ -322,7 +323,7 @@
 
         .votinggg.force {
             background-color: #006671;
-            color: #fff;
+            color: #ffddc9;
             opacity: 1;
         }
     }
@@ -367,7 +368,7 @@
             overflow: hidden;
             text-wrap: balance;
             max-width: 100px;
-            color: #ffffffd5;
+            color: #ffddc9d5;
             filter: brightness(0.6);
             text-align: center;
             align-self: center;
@@ -382,7 +383,7 @@
             overflow: hidden;
             text-align: start;
             text-wrap: wrap;
-            color: #ffffff77;
+            color: #ffddc977;
             text-overflow: ellipsis;
             word-break: break-word;
             margin: 0;
@@ -393,7 +394,7 @@
         }
 
         .castchar:hover {
-            color: #fff;
+            color: #ffddc9;
             max-height: 100px;
         }
     }
@@ -455,7 +456,7 @@
         overflow: hidden;
         text-wrap: balance;
         max-width: 100px;
-        color: #ffffffd5;
+        color: #ffddc9d5;
 
 
     }
@@ -486,4 +487,51 @@
 #seas {
     gap: 0;
     flex-direction: column;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    .details img, .overview, .genress img {
+        width: 100%; /* Adjust image width for smaller screens */
+        height: auto;
+    }
+
+    .details, .allpos, .backonly {
+        margin: 20px; /* Reduce margin */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .details .extra span, .details .rate {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .genress, .allcast, .seasons {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 480px) {
+    .details img, .overview, .genress img {
+        width: 100%; /* Ensure images take full width */
+    }
+
+    .details, .allpos, .backonly {
+        margin: 10px; /* Further reduce margin */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .details .extra span, .details .rate {
+        font-size: 14px; /* Reduce font size for readability */
+    }
+
+    .genress, .allcast, .seasons {
+        flex-direction: column; /* Ensure vertical stacking */
+        align-items: center;
+    }
+
+    .details h2, .casth, .watchnow {
+        font-size: 18px; /* Adjust heading sizes for better readability */
+    }
 }

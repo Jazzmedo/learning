@@ -30,8 +30,8 @@
     margin-left: 2rem;
 
     img {
-        box-shadow: -15px 15px 20px 0px rgba(255, 255, 255, 0.266);
-        border: 2px solid white;
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.266);
+        border: 2px solid #ffddc9;
         width: 100%;
         height: auto;
         border-radius: 20px;
@@ -40,7 +40,7 @@
 
     img:hover {
         transform: scale(1.05);
-        box-shadow: 15px 15px 20px 0px rgba(255, 255, 255, 0.266);
+        box-shadow: 0px 0px 20px 5px #ffddc944;
     }
 }
 
@@ -52,7 +52,7 @@
     }
 
     h3 {
-        color: rgba(255, 255, 255, 0.684);
+        color: #ffddc9;
         margin-top: 1rem;
         margin-left: 3rem;
         font-size: 1.2rem;
@@ -64,12 +64,12 @@
 
         span {
             padding-left: 2rem;
-            border-left: 1px solid white;
+            border-left: 1px solid #ffddc9;
         }
 
         span:first-child {
             padding-left: 0;
-            border-left: 0px solid white;
+            border-left: 0px solid #ffddc9;
         }
     }
 
@@ -79,7 +79,7 @@
         overflow: hidden;
         margin-left: 3rem;
         margin-top: 1rem;
-        color: rgba(255, 255, 255, 0.684);
+        color: #ffddc9;
         transition: all 0.5s ease-in-out;
         user-select: none;
         scroll-behavior: smooth;
@@ -97,7 +97,7 @@
     margin-top: 20px;
     gap: 1rem;
     align-items: flex-start;
-    color: #ffffff;
+    color: #ffddc9;
     transition: opacity 0.3s ease-in-out;
     font-size: 1.5vw;
     font-weight: 500;
@@ -119,7 +119,7 @@
         height: 30px;
         text-align: center;
         width: 55px;
-        background-color: #ffffff74;
+        background-color: #ffddc974;
         padding: 7px;
         border-radius: 10px;
         cursor: pointer;
@@ -127,7 +127,7 @@
     }
 
     img:hover {
-        background-color: #ffffff;
+        background-color: #ffddc9;
     }
 }
 
@@ -185,7 +185,7 @@
         overflow: hidden;
         text-wrap: balance;
         max-width: 100px;
-        color: #ffffffd5;
+        color: #ffddc9;
         filter: brightness(0.6);
         text-align: center;
         align-self: center;
@@ -200,7 +200,7 @@
         overflow: hidden;
         text-align: start;
         text-wrap: balance;
-        color: #ffffff77;
+        color: #ffddc977;
         text-overflow: ellipsis;
         word-break: break-word;
         margin: 0;
@@ -211,7 +211,7 @@
     }
 
     .movchar:hover {
-        color: #fff;
+        color: #ffddc9;
         max-height: 100px;
     }
 
@@ -232,6 +232,6 @@
 
     .votinggg.force {
         background-color: #006671;
-        color: #fff;
+        color: #ffddc9;
     }
 }

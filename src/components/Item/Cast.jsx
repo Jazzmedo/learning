@@ -34,7 +34,7 @@ function Cast() {
                 <div className='widtho'>
                     <h1 className='casth'>Cast</h1>
                     <div className="allcasting flexing">
-                        {Array.isArray(cast.cast) ? cast.cast.slice(0, 10).map((ele) => {
+                        {Array.isArray(cast.cast) ? cast.cast.slice(0, 8).map((ele) => {
 
                             return <Link key={ele.id} to={`/person/${ele.id}`}>
                                 <div key={ele.id} className='castcont'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />

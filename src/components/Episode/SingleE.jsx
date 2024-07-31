@@ -48,7 +48,7 @@ function SingleE() {
                                     <img src={`https://image.tmdb.org/t/p/w500/${episodes.still_path}`} alt="" />
                                     <div className="votinggg force">{parseInt(episodes.vote_average * 10)}%</div>
                                 </div>
-                                <h2 className='trendsss trendssss' style={{ fontSize: '2rem', marginTop: '3rem', borderTop: '1px solid #fff', paddingTop: '10px' }}>Watch Now</h2>
+                                <h2 className='trendsss trendssss' style={{ fontSize: '2rem', marginTop: '3rem', borderTop: '1px solid #ffddc9', paddingTop: '10px' }}>Watch Now</h2>
                                 <div className="flexonlyy">
                                     <a className='fgsdasd' href={tv.name ? `https://ext.to/search/?q=${tv.name.split(" ").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+eid < 10 ? "0" + eid : eid}` : '#'}>
                                         <img className='netw' src={`https://ext.to/static/img/ext_logo.png`} />

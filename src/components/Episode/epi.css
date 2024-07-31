@@ -8,15 +8,15 @@
 }
 
 .epiAll {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
+    background-color: #00000080;
+    box-shadow: 0 0 20px 20px #00000080;
     width: 100%;
     padding-bottom: 1rem;
     margin-top: -12px;
 }
 
 .trendsss.white.more {
-    color: #fff;
+    color: #ffddc9;
 }
 
 .epidet {
@@ -45,7 +45,7 @@
     transform: scale(1.05);
 
     img:hover {
-        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.266);
+        box-shadow: 0px 0px 20px 5px #ffddc944;
     }
 
     .votinggg.force {
@@ -69,11 +69,11 @@
     }
 
     img {
-        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.266);
-        border: 2px solid white;
+        border: 2px solid #ffddc9;
         width: 100%;
         height: auto;
         border-radius: 20px;
+        transition: all 0.3s ease-in-out;
 
     }
 
@@ -88,7 +88,7 @@
     }
 
     h3 {
-        color: rgba(255, 255, 255, 0.684);
+        color: #ffddc9ae;
         margin-top: 1rem;
         margin-left: 3rem;
         font-size: 1.2rem;
@@ -101,16 +101,16 @@
         span {
             transition: all 0.3s ease-in-out;
             padding-left: 2rem;
-            border-left: 1px solid white;
+            border-left: 1px solid #ffddc9;
         }
 
         span:first-child {
             padding-left: 0;
-            border-left: 0px solid white;
+            border-left: 0px solid #ffddc9;
         }
 
         span:hover {
-            color: #ffffff;
+            color: #ffddc9;
         }
     }
 
@@ -120,7 +120,7 @@
         overflow: hidden;
         margin-left: 3rem;
         margin-top: 1rem;
-        color: rgba(255, 255, 255, 0.684);
+        color: #ffddc9ae;
         transition: all 0.5s ease-in-out;
         user-select: none;
         scroll-behavior: smooth;
@@ -138,7 +138,7 @@
     margin-top: 20px;
     gap: 1rem;
     align-items: flex-start;
-    color: #ffffff;
+    color: #ffddc9;
     transition: opacity 0.3s ease-in-out;
     font-size: 1.5vw;
     font-weight: 500;
@@ -160,7 +160,7 @@
         height: 30px;
         text-align: center;
         width: 55px;
-        background-color: #ffffff74;
+        background-color: #ffddc974;
         padding: 7px;
         border-radius: 10px;
         cursor: pointer;
@@ -168,7 +168,7 @@
     }
 
     img:hover {
-        background-color: #ffffff;
+        background-color: #ffddc9;
     }
 }
 
@@ -205,7 +205,7 @@
         background-size: cover;
         background-color: rgb(255 255 255 / 10%);
         filter: brightness(0.6) blur(0.5px);
-        box-shadow: -0px 0px 0px 0px rgba(255, 255, 255, 0.266);
+        box-shadow: -0px 0px 0px 0px #ffddc944;
         transition: all 0.3s ease-in-out;
         margin-bottom: 1rem;
     }
@@ -226,7 +226,7 @@
         overflow: hidden;
         text-wrap: balance;
         max-width: 100px;
-        color: #ffffffd5;
+        color: #ffddc9d5;
         filter: brightness(0.6);
         text-align: center;
         align-self: center;
@@ -241,7 +241,7 @@
         overflow: hidden;
         text-align: start;
         text-wrap: balance;
-        color: #ffffff77;
+        color: #ffddc977;
         text-overflow: ellipsis;
         word-break: break-word;
         margin: 0;
@@ -252,7 +252,7 @@
     }
 
     .movchar:hover {
-        color: #fff;
+        color: #ffddc9;
         max-height: 100px;
     }
 
@@ -268,11 +268,11 @@
     }
 
     img:hover {
-        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.266);
+        box-shadow: 0px 0px 20px 0px #ffddc944;
     }
 
     .votinggg.force {
         background-color: #006671;
-        color: #fff;
+        color: #ffddc9;
     }
 }

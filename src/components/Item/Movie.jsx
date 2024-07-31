@@ -10,7 +10,6 @@ import { DetailsContext } from '../context/DetailsContextProvider'
 function Movie() {
 
     let [details, setData] = useState([])
-    let [loading, setLoading] = useState(true)
     let [imdb, setImdb] = useState([])
     let { id } = useParams()
     let { type } = useParams()
@@ -27,7 +26,6 @@ function Movie() {
 
     useEffect(() => {
         // getDet()
-        setLoading(true)
         getLogo()
         document.getElementById("Nv").scrollIntoView({ behavior: "smooth" });
         if (type == "tv") {
@@ -59,7 +57,7 @@ function Movie() {
         }
 
     }
-    console.log(details)
+    // console.log(details)
 
     document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
     document.title = `Plotwist | ${details.title || details.name}`;

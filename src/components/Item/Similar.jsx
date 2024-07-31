@@ -13,7 +13,7 @@ function Similar() {
     function getSimilar() {
         axios.get(`https://api.themoviedb.org/3/${type}/${id}/recommendations?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
             let x = shuffle(res.data.results)
-            setSimilar(Object.values(x).slice(0, 10))
+            setSimilar(Object.values(x).slice(0, 8))
 
         })
     }

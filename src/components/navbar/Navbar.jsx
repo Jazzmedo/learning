@@ -68,16 +68,16 @@ function Navbar() {
     return (
         <>
             <nav id="Nv" className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link className="navbar-brand preventt" to=""><img src={require("../../logo/wlogo.png")} height="24" /></Link>
+                <Link className="navbar-brand preventt" to=""><img src={require("../../logo/wlogo.png")} height="30" /></Link>
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li className="nav-item active ">
-                        <Link className="nav-link preventt" to="">Home</Link>
+                    <li className="nav-item preventt">
+                        <Link className="nav-link" to="">Home</Link>
                     </li>
                     <li className="nav-item preventt">
-                        <Link className="nav-link preventt" to="/Movies">Movies</Link>
+                        <Link className="nav-link " to="/Movies">Movies</Link>
                     </li>
                     <li className="nav-item preventt">
-                        <Link className="nav-link preventt" to="/TV">TV Shows</Link>
+                        <Link className="nav-link " to="/TV">TV Shows</Link>
                     </li>
                 </ul>
                 <div className="search-bar">

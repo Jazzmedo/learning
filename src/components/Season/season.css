@@ -44,11 +44,11 @@
 
 .posterrseas:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px 0px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px 0px #ffddc980;
 
     .votinggg.force {
         background-color: #006671;
-        color: #fff;
+        color: #ffddc9;
     }
 }
 
@@ -65,13 +65,13 @@
 
 .voteseas {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.614);
+    color: #ffddc99d;
     transition: all 0.3s ease-in-out;
     /* margin-top: 5px; */
 }
 
 .voteseas:hover {
-    color: rgb(255, 255, 255);
+    color: #ffddc9;
 }
 
 .seasvote {
@@ -79,7 +79,7 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 1rem;
-    color: rgba(255, 255, 255, 0.614);
+    color: #ffddc99d;
 }
 
 .posseas {
@@ -88,21 +88,21 @@
 }
 
 .seasname {
-    color: rgba(255, 255, 255, 0.614);
+    color: #ffddc99d;
     transition: all 0.3s ease-in-out;
     font-size: 1.3rem;
 }
 
 .seasname:hover {
-    color: rgb(255, 255, 255);
+    color: #ffddc9;
 }
 
 .watchnoww {
-    border: 1px solid #ffffff58;
+    border: 1px solid #ffddc958;
     border-width: 2px 0 0 0;
     padding-top: 10px;
     font-family: "ADLaM Display", sans-serif;
-    color: #ffffffe8;
+    color: #ffddc9e8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,7 +121,7 @@
 }
 
 .sep {
-    background-color: #ffffff58;
+    background-color: #ffddc958;
     width: 3px;
     height: 400px;
     margin-top: 1.3rem;
@@ -132,7 +132,7 @@
 }
 
 .epish2 {
-    color: #ffffffe8;
+    color: #ffddc9e8;
     font-size: 1.7rem;
     margin-top: 1rem;
 
@@ -149,7 +149,7 @@
 .oncardd {
     width: 29%;
     max-width: 29%;
-    height: 192px;
+    height: 220px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -177,9 +177,9 @@
     z-index: 10;
     transition: all 0.3s ease-in-out;
     background-color: #000000a5;
-    border: 1.5px solid #fff;
+    border: 1.5px solid #ffddc9;
     border-radius: 100px;
-    color: #fff;
+    color: #ffddc9;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -195,9 +195,9 @@
     right: -10px;
     z-index: 10;
     background-color: #006671cc;
-    border: 1.5px solid #fff;
+    border: 1.5px solid #ffddc9;
     border-radius: 100px;
-    color: #fff;
+    color: #ffddc9;
     font-size: 0.9rem;
     display: flex;
     transition: all 0.3s ease-in-out;
@@ -208,12 +208,12 @@
 
 .episdets {
     position: absolute;
-    bottom: 0;
+    bottom: 28px;
     left: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 35%;
-    color: #ffffffc4;
+    height: 30%;
+    color: #ffddc9c4;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     display: flex;
@@ -235,7 +235,7 @@
     width: 2px;
     height: 70%;
     margin: 2rem 1rem;
-    background-color: #ffffff8b;
+    background-color: #ffddc98b;
     transition: all 0.3s ease-in-out;
 }
 
@@ -263,12 +263,12 @@
     transform: scale(1.05);
 
     .septer {
-        background-color: #fff;
+        background-color: #ffddc9;
     }
 
     .detsdets {
         h6 {
-            color: #fff;
+            color: #ffddc9;
         }
     }
 
@@ -284,7 +284,7 @@
         background-color: rgba(0, 0, 0, 0.7);
 
         h5 {
-            color: #fff;
+            color: #ffddc9;
         }
     }
 }
@@ -303,7 +303,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin: 0 2rem;
+    margin: 0 2rem ;
+    padding-bottom: 4rem;
 
     a {
         text-decoration: none;
@@ -321,7 +322,7 @@
 
     img:hover {
         transform: scale(1.05);
-        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.266);
+        box-shadow: 0px 0px 20px 0px #ffddc944;
     }
 }
 
@@ -363,7 +364,7 @@
         overflow: hidden;
         text-wrap: balance;
         max-width: 100px;
-        color: #ffffff;
+        color: #ffddc9;
         filter: brightness(0.6);
         text-align: center;
         align-self: center;
@@ -378,7 +379,7 @@
         overflow: hidden;
         text-align: start;
         text-wrap: wrap;
-        color: #ffffff77;
+        color: #ffddc977;
         text-overflow: ellipsis;
         word-break: break-word;
         margin: 0;
@@ -389,7 +390,7 @@
     }
 
     .castcharr:hover {
-        color: #fff;
+        color: #ffddc9;
         max-height: 100px;
     }
 }

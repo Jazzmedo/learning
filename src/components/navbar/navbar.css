@@ -27,7 +27,7 @@
     border: none;
     border-radius: 50px;
     background-color: #00000094;
-    color: #c8ccd4;
+    color: #ffddc9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
     border: 1px solid #ffffff3b;
@@ -35,7 +35,7 @@
 }
 
 #searchInput::placeholder {
-    color: #c8ccd4;
+    color: #ffddc9;
     
 }
 
@@ -71,7 +71,7 @@
     display: block;
     padding: 4px;
     font-size: 14px;
-    color: #ffffff9b;
+    color: #ffddc99b;
     text-decoration: none;
     border-bottom: 1px solid #484e5c;
     transition: background-color 0.2s;
@@ -81,7 +81,7 @@
     .typee {
         transition: all 0.3s ease-in-out;
         text-transform: capitalize;
-        color: #ffffff9b;
+        color: #ffddc99b;
     }
 }
 
